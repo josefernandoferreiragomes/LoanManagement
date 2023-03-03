@@ -1,12 +1,8 @@
 ﻿using LoanManagement.DB.Data;
-using LoanManagement.DB.Interfaces;
-using System;
+using LoanManagement.Platform.Container;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
-using System.Web.Mvc;
+using Unity;
 
 namespace LoanManagement.Controllers
 {
@@ -20,7 +16,7 @@ namespace LoanManagement.Controllers
         //}
         public LoanManagementController()
         {
-            _LoanManagementRepository = (LoanManagement.Repositories.LoanManagerRepository)DependencyResolver.Current.GetService(typeof(LoanManagement.Repositories.LoanManagerRepository));
+            _LoanManagementRepository = ApplicationContainer.GetContainer().Resolve<LoanManagement.Interfaces.ILoanManagerRepository>();
         }
         // GET api/values
         public IEnumerable<Customer> Get()

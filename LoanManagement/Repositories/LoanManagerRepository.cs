@@ -1,10 +1,12 @@
 ﻿using LoanManagement.DB.Dao;
 using LoanManagement.DB.Data;
 using LoanManagement.Interfaces;
+using LoanManagement.Platform.Container;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using Unity;
 
 namespace LoanManagement.Repositories
 {
@@ -13,7 +15,7 @@ namespace LoanManagement.Repositories
         LoanManagement.DB.Interfaces.ILoanManagerRepository _repository;
         public LoanManagerRepository(LoanManagement.DB.Interfaces.ILoanManagerRepository repository) 
         { 
-            _repository= repository;
+            _repository= ApplicationContainer.GetContainer().Resolve<LoanManagement.DB.Interfaces.ILoanManagerRepository>();
         }
 
         public List<Customer> GetCustomer(int id)

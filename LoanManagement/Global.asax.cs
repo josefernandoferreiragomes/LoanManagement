@@ -1,5 +1,6 @@
 ﻿using LoanManagement.DB.Interfaces;
 using LoanManagement.DB.Repositories;
+using LoanManagement.Platform.Container;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,7 @@ namespace LoanManagement
     public class WebApiApplication : System.Web.HttpApplication
     {
 
-        private IUnityContainer myContainer;
+        
 
         protected void Application_Start()
         {
@@ -25,18 +26,14 @@ namespace LoanManagement
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            IUnityContainer myContainer = new UnityContainer();
 
-            myContainer.RegisterSingleton<LoanManagement.Interfaces.ILoanManagerRepository, LoanManagement.Repositories.LoanManagerRepository >();
-            myContainer.RegisterSingleton<LoanManagement.DB.Interfaces.ILoanManagerRepository, LoanManagement.DB.Repositories.LoanManagerRepository>();
+
+            ApplicationContainer.GetContainer().RegisterSingleton<LoanManagement.Interfaces.ILoanManagerRepository, LoanManagement.Repositories.LoanManagerRepository >();
+            ApplicationContainer.GetContainer().RegisterSingleton<LoanManagement.DB.Interfaces.ILoanManagerRepository, LoanManagement.DB.Repositories.LoanManagerRepository>();
 
             
         }
 
-        public IUnityContainer GetContainer()
-        {
-
-            return myContainer;
-        }
+        
     }
 }
