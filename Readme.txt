@@ -11,3 +11,10 @@ C:\Program Files\Microsoft SQL Server\150\Tools\Binn
 
 connect to local db
 (localdb)\MSSQLLocalDb
+
+api
+	https://www.tutorialspoint.com/asp.net_mvc/asp.net_mvc_web_api.htm
+
+call api local
+	http://localhost:51852/Api/LoanManagement/
+	http://localhost:51852/Api/Values/

@@ -4,15 +4,24 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Results;
 
 namespace LoanManagement.Controllers
 {
     public class ValuesController : ApiController
     {
         // GET api/values
-        public IEnumerable<string> Get()
+        //public IEnumerable<string> Get()
+        //{
+        //    return new string[] { "value1", "value2" };
+        //}
+
+        public JsonResult <IEnumerable<string>> Get()
         {
-            return new string[] { "value1", "value2" };
+            IEnumerable<string> values = new List<string>();
+            values.Append<string>("value1");
+            values.Append<string>("value2");
+            return Json(values);
         }
 
         // GET api/values/5

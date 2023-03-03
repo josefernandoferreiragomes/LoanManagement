@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
+using System.Web.Helpers;
 using System.Web.Http;
 
 namespace LoanManagement.Tests.Controllers
@@ -20,7 +21,7 @@ namespace LoanManagement.Tests.Controllers
             ValuesController controller = new ValuesController();
 
             // Act
-            IEnumerable<string> result = controller.Get();
+            IEnumerable<string> result =  Json.Decode<IEnumerable<string>>( controller.Get().ToString());
 
             // Assert
             Assert.IsNotNull(result);
