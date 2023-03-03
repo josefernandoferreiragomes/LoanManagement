@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dao\LoanManagementDBContext.cs" />
+    <Compile Include="Dao\LoanManagementDBInitializer.cs" />
     <Compile Include="Data\Customer.cs" />
     <Compile Include="Data\Loan.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

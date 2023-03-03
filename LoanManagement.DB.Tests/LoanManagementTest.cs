@@ -2,6 +2,7 @@
 using LoanManagement.DB.Data;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Linq;
 
 namespace LoanManagement.DB.Tests
 {
@@ -14,7 +15,7 @@ namespace LoanManagement.DB.Tests
             using (var db = new LoanManagementDBContext())
             {
                 // Create and save a new Customer
-                Console.Write("Enter a name for a new Blog: ");
+                
                 var name = "Jack";
 
                 var customer = new Customer { CustomerName = name };
@@ -22,14 +23,14 @@ namespace LoanManagement.DB.Tests
                 db.SaveChanges();
 
                 //// Display all customers from the database
-                //var query = from b in db.Customers                            
-                //            select b;
+                var query = from b in db.Customers.ToList<Customer>()                            
+                            select b;
 
                 Console.WriteLine("All customers in the database:");
-                //foreach (var item in query)
-                //{
-                //    Console.WriteLine(item.Name);
-                //}
+                foreach (var item in query)
+                {
+                    Console.WriteLine(item.CustomerName);
+                }
             }
         }
     }
