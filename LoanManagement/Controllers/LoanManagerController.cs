@@ -6,7 +6,7 @@ using Unity;
 
 namespace LoanManagement.Controllers
 {
-    public class LoanManagementController : ApiController
+    public class LoanManagercontroller : ApiController
     {
         LoanManagement.Interfaces.ILoanManagerRepository _LoanManagementRepository { get; set; }
         //public LoanManagementController() { }
@@ -14,7 +14,7 @@ namespace LoanManagement.Controllers
         //{
         //    _LoanManagementRepository = repository;
         //}
-        public LoanManagementController()
+        public LoanManagercontroller()
         {
             _LoanManagementRepository = ApplicationContainer.GetContainer().Resolve<LoanManagement.Interfaces.ILoanManagerRepository>();
         }

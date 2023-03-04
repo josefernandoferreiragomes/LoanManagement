@@ -12,7 +12,7 @@ namespace LoanManagement.Tests.Controllers
         public void Get()
         {
             // Arrange
-            LoanManagementController controller = new LoanManagementController();
+            LoanManagercontroller controller = new LoanManagercontroller();
 
             // Act
             var result = controller.Get();
