@@ -38,3 +38,7 @@ Add api reference in the web site
 
 consume the web api
 	https://learn.microsoft.com/en-us/aspnet/web-api/overview/advanced/calling-a-web-api-from-a-net-client
+
+
+version DB
+	https://www.red-gate.com/hub/product-learning/sql-source-control/github-and-sql-source-control

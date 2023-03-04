@@ -38,7 +38,7 @@ namespace LoanManagement.WebSite.Controllers
             customerViewModel.CustomerList = new List<Customer>();            
 
             List<Management.Customer> response;
-            response = await ApiLoanDataClass.ObtainCustomers();
+            response = await ApiLoanDataWrapperClass.ObtainCustomers();
 
             foreach (Management.Customer customerItem in response)
             {

@@ -122,7 +122,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Data\ApiLoanDataClass.cs" />
+    <Compile Include="Data\ApiLoanDataWrapperClass.cs" />
     <Compile Include="Factories\ClientFactory.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
