@@ -1,4 +1,5 @@
-﻿using LoanManagement.WebSite.Models;
+﻿using LoanManagement.WebSite.Data;
+using LoanManagement.WebSite.Models;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -31,26 +32,20 @@ namespace LoanManagement.WebSite.Controllers
             return View(customerViewModel);
         }
 
-        public async Task<CustomerViewModel> GetCustomerAsync()
+        private async Task<CustomerViewModel> GetCustomerAsync()
         {
             CustomerViewModel customerViewModel = new CustomerViewModel();
-            customerViewModel.CustomerList = new List<Customer>();  
+            customerViewModel.CustomerList = new List<Customer>();            
 
-            ViewBag.Message = "Your application description page.";
-            HttpClient httpclient = new HttpClient();
-            httpclient.BaseAddress = new Uri(@"http://localhost:51852/Api/LoanManager/");
-            Management.LoanManagerClient client = new Management.LoanManagerClient(httpclient);
-
-            List<Management.Customer> customer = new List<Management.Customer>();
-            
-            List<Management.Customer> response = (List<Management.Customer>)await client.GetAllAsync();            
+            List<Management.Customer> response;
+            response = await ApiLoanDataClass.ObtainCustomers();
 
             foreach (Management.Customer customerItem in response)
             {
-                customerViewModel.CustomerList.Add(new Customer { CustomerName = customerItem.CustomerName, Id= (int)customerItem.CustomerId });
+                customerViewModel.CustomerList.Add(new Customer { CustomerName = customerItem.CustomerName, Id = (int)customerItem.CustomerId });
             }
             return customerViewModel;
-        }
+        }        
 
         public ActionResult Contact()
         {
