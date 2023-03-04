@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using LoanManagement.WebSite.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,22 +17,24 @@ namespace LoanManagement.WebSite.Controllers
             return View();
         }
 
-        //public ActionResult About()
-        //{
-
-        //    ViewBag.Message = "Your application description page.";
-        //    return View();
-        //}
-
-        public async Task<ActionResult> About()
+        public ActionResult About()
         {
-            await GetCustomerAsync();
-            ViewBag.Message = "Your application description page.";
+
+            ViewBag.Message = "Your Customers.";
             return View();
         }
 
-        public async Task<List<Management.Customer>> GetCustomerAsync()
+        public async Task<ActionResult> Customers()
         {
+            CustomerViewModel customerViewModel= await GetCustomerAsync();
+            ViewBag.Message = "Your application description page.";
+            return View(customerViewModel);
+        }
+
+        public async Task<CustomerViewModel> GetCustomerAsync()
+        {
+            CustomerViewModel customerViewModel = new CustomerViewModel();
+            customerViewModel.CustomerList = new List<Customer>();  
 
             ViewBag.Message = "Your application description page.";
             HttpClient httpclient = new HttpClient();
@@ -42,7 +45,11 @@ namespace LoanManagement.WebSite.Controllers
             
             List<Management.Customer> response = (List<Management.Customer>)await client.GetAllAsync();            
 
-            return customer;
+            foreach (Management.Customer customerItem in response)
+            {
+                customerViewModel.CustomerList.Add(new Customer { CustomerName = customerItem.CustomerName, Id= (int)customerItem.CustomerId });
+            }
+            return customerViewModel;
         }
 
         public ActionResult Contact()

@@ -33,12 +33,12 @@ namespace LoanManagement.WebSite.Tests.Controllers
             HomeController controller = new HomeController();
 
             // Act
-            Task<ActionResult> result = controller.About();
+            ViewResult result = (ViewResult)controller.About();
             //ActionResult result = controller.About();
 
             // Assert
             //to be corrected. obtain viewbag instead
-            Assert.AreEqual("Your application description page.", result.ToString());
+            Assert.AreEqual("Your application description page.", result.ViewBag);
         }
 
         [TestMethod]
