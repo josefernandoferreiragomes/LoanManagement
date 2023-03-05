@@ -121,13 +121,18 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\InstallmentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Data\ApiLoanDataWrapperClass.cs" />
     <Compile Include="Factories\ClientFactory.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AddCustomerViewmodel.cs" />
+    <Compile Include="Models\CustomerType.cs" />
+    <Compile Include="Models\Intallment.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\InstallmentViewModel.cs" />
     <Compile Include="Models\CustomerViewModel.cs" />
     <Compile Include="OpenAPIs\v1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -158,6 +163,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\LoanManager\LoanManager.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -174,6 +180,9 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Customers.cshtml" />
+    <Content Include="Views\Installment\LoanInstallments.cshtml" />
+    <Content Include="Views\Installment\Index.cshtml" />
+    <Content Include="Views\Home\AddCustomer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

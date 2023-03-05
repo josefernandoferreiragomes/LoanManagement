@@ -23,5 +23,10 @@ namespace LoanManagement.Repositories
             return _repository.GetCustomers();
             
         }
+
+        public CustomerLoanInstallmentDBOut GetPageOfCustomerLoanInstallment(CustomerLoaInstallmentDBIn objIn)
+        {
+            return _repository.GetPageOfCustomerLoanInstallment(objIn);
+        }
     }
 }

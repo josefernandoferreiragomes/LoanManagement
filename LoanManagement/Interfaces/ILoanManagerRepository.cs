@@ -9,5 +9,6 @@ namespace LoanManagement.Interfaces
     public interface ILoanManagerRepository
     {
         List<Customer> GetCustomer(int id);
+        CustomerLoanInstallmentDBOut GetPageOfCustomerLoanInstallment(CustomerLoaInstallmentDBIn objIn);
     }
 }

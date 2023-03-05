@@ -14,7 +14,7 @@ BEGIN
 	SET NOCOUNT ON;
 
     SELECT cust.CustomerId, cust.CustomerName, ln.LoanDescription, inst.Installment, inst.InstallmentId
-	FROM Installments inst RIGHT JOIN Loans ln ON inst.LoanId = ln.LoanId RIGHT JOIN Customers cust ON ln.Customer_CustomerId=cust.CustomerId
+	FROM Installments inst INNER JOIN Loans ln ON inst.LoanId = ln.LoanId INNER JOIN Customers cust ON ln.Customer_CustomerId=cust.CustomerId
 	WHERE cust.CustomerId=@CustomerId
 	AND inst.InstallmentId > @LastPageLastInstallmentId
 	ORDER BY inst.InstallmentId OFFSET 0 ROWS FETCH NEXT 2 ROWS ONLY

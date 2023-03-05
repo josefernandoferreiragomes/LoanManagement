@@ -42,3 +42,12 @@ consume the web api
 
 version DB
 	https://www.red-gate.com/hub/product-learning/sql-source-control/github-and-sql-source-control
+	as an alternative
+	create Database Project
+	import database and then manage database from visual studio
+
+paging
+	https://www.c-sharpcorner.com/article/execute-a-stored-procedure-programmatically/
+
+ajax mvc
+	https://www.c-sharpcorner.com/blogs/using-ajax-in-asp-net-mvc

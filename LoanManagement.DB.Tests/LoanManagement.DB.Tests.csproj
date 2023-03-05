@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="LoanManagementTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="LoanManagementDBExecuterTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

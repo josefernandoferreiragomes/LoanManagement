@@ -115,6 +115,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\BaseTest.cs" />
+    <Compile Include="Controllers\LoanInstallmentControllerTest.cs" />
     <Compile Include="Controllers\LoanManagementControllerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\HomeControllerTest.cs" />

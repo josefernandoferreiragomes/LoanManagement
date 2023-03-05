@@ -24,6 +24,10 @@ namespace LoanManagement.WebSite.Factories
                     _httpclient.BaseAddress = new Uri(@"http://localhost:51852/Api/LoanManager/");
                     data = (T)Activator.CreateInstance(typeof(T), _httpclient);
                     break;
+                case "LoanInstallmentClient":
+                    _httpclient.BaseAddress = new Uri(@"http://localhost:51852/Api/LoanInstallment/");
+                    data = (T)Activator.CreateInstance(typeof(T), _httpclient);
+                    break;
 
             }
             return data;

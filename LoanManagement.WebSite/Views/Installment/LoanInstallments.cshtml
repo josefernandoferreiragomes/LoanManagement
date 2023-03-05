@@ -1,0 +1,52 @@
+﻿@model LoanManagement.WebSite.Models.InstallmentViewModel
+@{
+    ViewBag.Title = "INSTALLMENTS";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Use this area to provide additional information.</p>
+
+<div class="container">
+    <div class="row bg-primary">
+
+        <div class="col-md-2">
+            InstallmentId
+        </div>
+        <div class="col-md-2">
+            CustomerName
+        </div>
+        <div class="col-md-2">
+            LoanDescription
+        </div>
+        <div class="col-md-2">
+            InstallmentValue
+        </div>
+    </div>
+    
+        @foreach (LoanManagement.WebSite.Models.Installment installment in Model.InstallmentList)
+            {
+        <div class="row">
+            <div class="col-md-2">
+                @installment.InstallmentId
+            </div>
+            <div class="col-md-2">
+                @installment.CustomerName
+            </div>
+            <div class="col-md-2">
+                @installment.LoanDescription
+            </div>
+            <div class="col-md-2">
+                @installment.InstallmentValue.ToString("C3")
+            </div>
+        </div>
+            }
+    
+</div>
+<div>
+    @Html.ActionLink(linkText:"NextPage", 
+    actionName:"LoanInstallments", 
+    controllerName:"Installment", 
+    routeValues:new { CustomerId = 4, LastPageLastItemId = Model.InstallmentList[Model.InstallmentList.Count-1].InstallmentId },
+    htmlAttributes: null)
+</div>

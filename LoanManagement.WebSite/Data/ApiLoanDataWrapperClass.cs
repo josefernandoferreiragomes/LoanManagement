@@ -25,10 +25,41 @@ namespace LoanManagement.WebSite.Data
             }
             catch (Management.ApiException ex)
             {
+                //TODO Handle exception
                 throw ex;
             }
             catch(Exception ex)
             {
+                //TODO Handle exception
+                throw ex;
+            }
+            finally
+            {
+                //any final procedures like dispose object
+            }
+            return response;
+        }
+
+        public static async Task<List<Management.CustomerLoanInstallmentDBOutItem>> ObtainLoanInstallmentPage(int CustomerId, int pageSize, int LastPageLastItemId)
+        {
+
+            List<Management.CustomerLoanInstallmentDBOutItem> response = new List<Management.CustomerLoanInstallmentDBOutItem>();
+
+            ClientFactory<Management.LoanInstallmentClient> clientFactory = new ClientFactory<Management.LoanInstallmentClient>();
+            Management.LoanInstallmentClient client = clientFactory.GetClient();
+
+            try
+            {
+                response = (List<Management.CustomerLoanInstallmentDBOutItem>)await client.GetAsync(CustomerId, pageSize, LastPageLastItemId);
+            }
+            catch (Management.ApiException ex)
+            {
+                //TODO Handle exception
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                //TODO Handle exception
                 throw ex;
             }
             finally
