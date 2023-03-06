@@ -51,3 +51,6 @@ paging
 
 ajax mvc
 	https://www.c-sharpcorner.com/blogs/using-ajax-in-asp-net-mvc
+
+MVC routes
+	https://www.dotnettricks.com/learn/mvc/route-constraints-in-aspnet-mvc-with-example
