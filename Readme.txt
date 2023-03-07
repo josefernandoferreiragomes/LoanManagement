@@ -54,3 +54,33 @@ ajax mvc
 
 MVC routes
 	https://www.dotnettricks.com/learn/mvc/route-constraints-in-aspnet-mvc-with-example
+
+MVC Helpers
+	https://www.c-sharpcorner.com/article/html-helpers-in-asp-net-mvc/
+	(basic)
+	https://www.tutorialsteacher.com/mvc/html-helpers
+	(complete)
+
+MVC Best practices
+	https://www.c-sharpcorner.com/Blogs/asp-net-mvc-best-practices
+	https://www.codeproject.com/Articles/667522/ASP-NET-MVC-Best-Practices
+	https://www.codingame.com/playgrounds/10771/asp-net-mvc-dos-and-dontsbest-practices        
+
+SQL Query execution plans
+	https://www.sqlshack.com/explore-the-secrets-of-sql-server-execution-plans/
+
+SQL ROW_NUMBER
+	https://www.sqlservertutorial.net/sql-server-window-functions/sql-server-row_number-function/
+
+SQL Server joins
+	https://www.sqlservertutorial.net/sql-server-basics/sql-server-joins/
+	https://www.sqlservertutorial.net/sql-server-basics/sql-server-cross-join/
+
+MVC validation
+	https://learn.microsoft.com/en-us/aspnet/mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-6
+
+datepicker
+	https://www.c-sharpcorner.com/blogs/easy-way-to-use-datepicker-in-asp-net-mvc
+
+SQL
+	https://www.dotnettricks.com/learn/sqlserver/difference-between-cte-and-temp-table-and-table-variable

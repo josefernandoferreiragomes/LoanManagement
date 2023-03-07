@@ -38,7 +38,55 @@ namespace LoanManagement.WebSite.Controllers
             return View(addCustomerViewmodel);
         }
 
-        private static AddCustomerViewmodel FillAddCustomerViewModel(int selected=0)
+        public ActionResult AddCustomerFormCollection()
+        {
+            CustomerFormCollectionViewModel addCustomerViewmodel = new CustomerFormCollectionViewModel();
+            
+
+            return View(addCustomerViewmodel);
+        }
+        
+        [HttpPost]
+        public ActionResult AddCustomerFormCollection(FormCollection collection)
+        {
+
+            //TODO Send information to API
+            CustomerFormCollectionViewModel addCustomerViewmodel = new CustomerFormCollectionViewModel();
+            
+            addCustomerViewmodel.FullName = collection["fullName"];
+            
+            addCustomerViewmodel.Message = "Customer successfully added";
+
+            return View(addCustomerViewmodel);
+        }
+
+        [HttpPost]
+        public ActionResult AddCustomer(Customer customer)
+        {
+            
+            //TODO Send information to API
+            AddCustomerViewmodel addCustomerViewmodel = FillAddCustomerViewModel(customer.CustomerTypeId);
+            addCustomerViewmodel.customer = new Customer();
+            addCustomerViewmodel.customer.CustomerName= customer.CustomerName;
+            addCustomerViewmodel.customer.CustomerTypeId= customer.CustomerTypeId;
+            addCustomerViewmodel.Message = "Customer successfully added";
+            
+            return View(addCustomerViewmodel);
+        }
+        [HttpPost]
+        public ActionResult AddCustomerAjax(Customer customer)
+        {
+
+            string message = "SUCCESS adding customer from Ajax";
+            //TODO Send information to API
+            return Json(new
+            {
+                Message = message,
+                JsonRequestBehavior.AllowGet
+            });
+        }
+
+        private static AddCustomerViewmodel FillAddCustomerViewModel(int selected = 0)
         {
             AddCustomerViewmodel addCustomerViewmodel = new AddCustomerViewmodel();
             //MOCK
@@ -64,36 +112,13 @@ namespace LoanManagement.WebSite.Controllers
                 {
                     Value = customerType.CustomerTypeID.ToString(),
                     Text = customerType.CustomerTypeDescription,
-                    Selected=customerType.CustomerTypeID == selected
+                    Selected = customerType.CustomerTypeID == selected
                 });
             }
 
             return addCustomerViewmodel;
         }
 
-        [HttpPost]
-        public ActionResult AddCustomer(Customer customer)
-        {
-            
-            AddCustomerViewmodel addCustomerViewmodel = FillAddCustomerViewModel(customer.CustomerTypeId);
-            addCustomerViewmodel.customer = new Customer();
-            addCustomerViewmodel.customer.CustomerName= customer.CustomerName;
-            addCustomerViewmodel.customer.CustomerTypeId= customer.CustomerTypeId;
-            addCustomerViewmodel.Message = "Customer successfully added";
-            
-            return View(addCustomerViewmodel);
-        }
-        [HttpPost]
-        public ActionResult AddCustomerAjax(Customer customer)
-        {
-
-            string message = "SUCCESS adding customer from Ajax";
-            return Json(new
-            {
-                Message = message,
-                JsonRequestBehavior.AllowGet
-            });
-        }
         private async Task<CustomerViewModel> GetCustomerAsync()
         {
             CustomerViewModel customerViewModel = new CustomerViewModel();

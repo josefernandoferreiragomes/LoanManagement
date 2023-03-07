@@ -21,11 +21,11 @@ namespace LoanManagement.WebSite.Controllers
 
       
 
-        public async Task<ActionResult> LoanInstallments(int CustomerId=0,int LastPageLastItemId=0)
+        public async Task<ActionResult> LoanInstallments(InstallmentViewModel inputModel)
         {
-            CustomerId = 4;
-            InstallmentViewModel customerViewModel= await GetCustomerAsync(CustomerId, LastPageLastItemId);
-            ViewBag.Message = "Your application description page.";
+            
+            InstallmentViewModel customerViewModel= await GetCustomerAsync(inputModel.CustomerId, inputModel.LastPageLastItemId);
+            ViewBag.Message = "All installments";
             return View(customerViewModel);
         }        
 

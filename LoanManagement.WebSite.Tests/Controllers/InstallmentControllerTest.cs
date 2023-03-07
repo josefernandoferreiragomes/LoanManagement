@@ -39,7 +39,7 @@ namespace LoanManagement.WebSite.Tests.Controllers
             LastPage = 0;
 
             // Act
-            ViewResult result = (ViewResult)await controller.LoanInstallments(CustomerId, LastPage);
+            ViewResult result = (ViewResult)await controller.LoanInstallments(new Models.InstallmentViewModel { CustomerId = CustomerId, LastPageLastItemId = LastPage });
             //ActionResult result = controller.About();
 
             // Assert

@@ -7,6 +7,9 @@ namespace LoanManagement.WebSite.Models
 {
     public class InstallmentViewModel
     {
+        public int LastPageLastItemId { get; set; }
+        public int CustomerId { get; set; }
+        
         public List<Installment> InstallmentList { get; set; }
     }
 }

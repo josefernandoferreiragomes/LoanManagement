@@ -5,42 +5,74 @@
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
 
-<p>Use this area to provide additional information.</p>
+<p>Customer information.</p>
 
 <div class="container">
     @using (Html.BeginForm(actionName: "AddCustomer", controllerName: "Home", method: FormMethod.Post))
     {
-    <div class="row">
-        <div class="col-md-2">
-            @Html.LabelFor(m => m.customer.CustomerName)
+        <div class="row">
+            <div class="col-lg-2">
+                @Html.LabelFor(m => m.customer.CustomerName)
+            </div>
+            <div class="col-lg-2">
+                @Html.TextBoxFor(m => m.customer.CustomerName, "", new { id = "CustomerName" })
+            </div>
         </div>
-        <div class="col-md-2">
-            @Html.TextBoxFor(m => m.customer.CustomerName, new { id = "CustomerName" })
+        <div class="row">
+            <div class="col-lg-4">
+                @Html.ValidationMessageFor(m => m.customer.CustomerName, "", new { @class = "text-danger" })
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-2">
-            @Html.LabelFor(m => m.customer.CustomerTypeId)
+        <div class="row">
+            <div class="col-lg-2">
+                @Html.LabelFor(m => m.customer.CustomerTypeId)
+            </div>
+            <div class="col-lg-2">
+                @Html.DropDownListFor(m => m.customer.CustomerTypeId, Model.selecLoanItems, "Select Customer Type", new { id = "CustomerTypeId" })
+            </div>
         </div>
-        <div class="col-md-2">
-            @Html.DropDownListFor(m => m.customer.CustomerTypeId, Model.selecLoanItems, "Select Customer Type", new { id = "CustomerTypeId" })
+        <div class="row">
+            <div class="col-lg-4">
+                @Html.ValidationMessageFor(m => m.customer.CustomerTypeId, "", new { @class = "text-danger" })
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <input type="submit" value="Submit Form" />
+        <div class="row">
+            <div class="col-lg-2">
+                @Html.LabelFor(m => m.customer.Email)
+            </div>
+            <div class="col-lg-2">
+                @Html.TextBoxFor(m => m.customer.Email, new { id = "CustomerEmail" })
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            @Model.Message
+        <div class="row">
+            <div class="col-lg-4">
+                @Html.ValidationMessageFor(m => m.customer.Email, "", new { @class = "text-danger" })
+            </div>
         </div>
-    </div>
-    
+        @*<div class="row">
+            <div class="col-lg-2">
+                @Html.LabelFor(m => m.customer.DateOfBirth)
+            </div>
+            <div class="col-lg-2">
+                @Html.TextBoxFor(m => m.customer.DateOfBirth, new {@class = "datepicker"})                
+            </div>
+        </div>*@
+
+        <div class="row">
+            <div class="col">
+                <input type="submit" value="Submit Form" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                @Model.Message
+            </div>
+        </div>
+
     }
     <p></p>
     <div class="row">
-        <div class="col-md-1">
+        <div class="col">
             <button id="btnSave">Save Customer Ajax</button>
         </div>
     </div>

@@ -5,22 +5,22 @@
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
 
-<p>Use this area to provide additional information.</p>
+<p>All customers</p>
 
 <div class="container">
     <div class="row bg-primary">
 
         <div class="col-md-2">
-            InstallmentId
+            Installment Id
         </div>
         <div class="col-md-2">
-            CustomerName
+            Customer Name
         </div>
         <div class="col-md-2">
-            LoanDescription
+            Loan Description
         </div>
         <div class="col-md-2">
-            InstallmentValue
+            Installment Value
         </div>
     </div>
     
@@ -44,9 +44,9 @@
     
 </div>
 <div>
-    @Html.ActionLink(linkText:"NextPage", 
+    @Html.ActionLink(linkText:"Next Page", 
     actionName:"LoanInstallments", 
     controllerName:"Installment", 
-    routeValues:new { CustomerId = 4, LastPageLastItemId = Model.InstallmentList[Model.InstallmentList.Count-1].InstallmentId },
+    routeValues:new { LastPageLastItemId = Model.InstallmentList[Model.InstallmentList.Count-1].InstallmentId },
     htmlAttributes: null)
 </div>

@@ -1,5 +1,11 @@
 ﻿ 
-    
+$(document).ready(function () {
+    $(".ui-datepicker").datepicker({
+        dateFormat: "dd-mm-yy",
+        changemonth: true,
+        changeyear: true
+    });
+});
 $(function () {  
     
     $("#btnSave").click(function () {  
@@ -24,4 +30,6 @@ $(function () {
         });  
         return false;  
     });  
+
+    
 });  
