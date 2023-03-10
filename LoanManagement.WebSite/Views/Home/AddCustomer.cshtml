@@ -49,15 +49,14 @@
                 @Html.ValidationMessageFor(m => m.customer.Email, "", new { @class = "text-danger" })
             </div>
         </div>
-        @*<div class="row">
+        <div class="row">
             <div class="col-lg-2">
                 @Html.LabelFor(m => m.customer.DateOfBirth)
             </div>
             <div class="col-lg-2">
-                @Html.TextBoxFor(m => m.customer.DateOfBirth, new {@class = "datepicker"})                
+                @Html.TextBoxFor(m => m.customer.DateOfBirth, new {@class = "datepicker"})
             </div>
-        </div>*@
-
+        </div>
         <div class="row">
             <div class="col">
                 <input type="submit" value="Submit Form" />
@@ -78,8 +77,10 @@
     </div>
 </div>
 
-    @section Scripts
+@section Scripts
     {
-        <script src="~/Scripts/LoanManager/LoanManager.js"></script>
+    @Scripts.Render("~/bundles/jqueryui")
+    @Styles.Render("~/Content/cssjqryUi")
+    <script src="~/Scripts/LoanManager/LoanManager.js"></script>
 
-    }
+}

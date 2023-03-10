@@ -1,11 +1,17 @@
 ﻿ 
+
+
 $(document).ready(function () {
-    $(".ui-datepicker").datepicker({
+    $(".datepicker").datepicker({
         dateFormat: "dd-mm-yy",
         changemonth: true,
-        changeyear: true
+        changeyear: true,
+        beforeShow: function (input, inst) {
+            $(inst.dpDiv).addClass('bg-warning');
+        }
     });
 });
+
 $(function () {  
     
     $("#btnSave").click(function () {  

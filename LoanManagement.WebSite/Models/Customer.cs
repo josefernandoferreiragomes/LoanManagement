@@ -21,6 +21,7 @@ namespace LoanManagement.WebSite.Models
         [EmailAddress(ErrorMessage = "Invalid Email Address")]
         public string Email { get; set; }
 
+        [Display(Name = "Date of birth")]
         public DateTime DateOfBirth { get; set; }   
 
         public bool Gender { get; set; }
