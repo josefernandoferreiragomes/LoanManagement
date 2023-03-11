@@ -24,12 +24,12 @@ namespace LoanManagement.WebSite.Controllers
         public async Task<ActionResult> LoanInstallments(InstallmentViewModel inputModel)
         {
             
-            InstallmentViewModel customerViewModel= await GetCustomerAsync(inputModel.CustomerId, inputModel.LastPageLastItemId);
+            InstallmentViewModel customerViewModel= await GetInstallmentsAsync(inputModel.CustomerId, inputModel.LastPageLastItemId);
             ViewBag.Message = "All installments";
             return View(customerViewModel);
         }        
 
-        private async Task<InstallmentViewModel> GetCustomerAsync(int CustomerId, int LastPageLastItemId)
+        private async Task<InstallmentViewModel> GetInstallmentsAsync(int CustomerId, int LastPageLastItemId)
         {
             InstallmentViewModel installmentViewModel = new InstallmentViewModel();
             installmentViewModel.InstallmentList = new List<Installment>();            
@@ -43,7 +43,7 @@ namespace LoanManagement.WebSite.Controllers
                     CustomerName = installmentItem.CustomerName, 
                     LoanDescription = installmentItem.LoanDescription, 
                     InstallmentId = (int)installmentItem.InstallmentId, 
-                    InstallmentValue= (decimal)installmentItem.Installment});
+                    InstallmentValue= (decimal)installmentItem.InstallmentValue});
             }
             return installmentViewModel;
         }        

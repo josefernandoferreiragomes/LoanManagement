@@ -38,7 +38,7 @@ namespace LoanManagement.DB.DaoSqlExecuters
                         item.InstallmentId = (int)reader["CustomerId"];
                         item.CustomerName = (string)reader["CustomerName"];
                         item.LoanDescription = (string)reader["LoanDescription"];
-                        item.Installment = (decimal)reader["Installment"];
+                        item.InstallmentValue = (decimal)reader["InstallmentValue"];
                         item.InstallmentId = (int)reader["InstallmentId"];
                         ObjDbOut.ListOfItems.Add(item);
                     }

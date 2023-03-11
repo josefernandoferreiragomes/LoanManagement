@@ -2,6 +2,7 @@
 using LoanManagement.DB.Data;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace LoanManagement.DB.Tests
@@ -9,6 +10,42 @@ namespace LoanManagement.DB.Tests
     [TestClass]
     public class LoanManagementTest
     {
+        [TestMethod]
+        public void TestDbContextDbSeed()
+        {
+            using (var context = new LoanManagementDBContext())
+            {
+                List<Customer> customers = new List<Customer>();
+                Customer customerA = new Customer() { CustomerName = "Jack Ma" };
+                Customer customerB = new Customer() { CustomerName = "Jack Dorsey" };
+
+                customers.Add(customerA);
+                customers.Add(customerB);
+                customers.Add(new Customer() { CustomerName = "John Doe" });
+                customers.Add(new Customer() { CustomerName = "Satya Nadella" });
+                customers.Add(new Customer() { CustomerName = "Elon Musk" });
+                customers.Add(new Customer() { CustomerName = "Elizabeth Holmes" });
+                customers.Add(new Customer() { CustomerName = "Sundar Pichai" });
+
+                context.Customers.AddRange(customers);
+
+                List<Loan> loans = new List<Loan>();
+                Loan loanA = new Loan() { Customer = customerA, LoanDescription = "Mortgage loan", LoanValue = 100000 };
+                Loan loanB = new Loan() { Customer = customerB, LoanDescription = "Leasing loan", LoanValue = 50000 };
+                loans.Add(loanA);
+                loans.Add(loanB);
+
+                context.Loans.AddRange(loans);
+
+                List<Installment> installments = new List<Installment>();
+                installments.Add(new Installment() { Loan = loanA, InstallmentValue = loanA.LoanValue / 36 });
+                installments.Add(new Installment() { Loan = loanB, InstallmentValue = loanB.LoanValue / 36 });
+
+                context.Installments.AddRange(installments);
+
+                context.SaveChanges();
+            }
+        }
         [TestMethod]
         public void TestDbContext()
         {

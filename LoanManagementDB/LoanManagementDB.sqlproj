@@ -161,4 +161,7 @@
     <None Include="LoanManagementDB.publishLocal.xml" />
     <None Include="LoanManagementDBdesktop.publish.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="LoanManagementDB.refactorlog" />
+  </ItemGroup>
 </Project>

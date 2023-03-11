@@ -1,5 +1,4 @@
-﻿using MathNet.Numerics;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -9,14 +8,12 @@ using System.Threading.Tasks;
 
 namespace LoanManagement.DB.Data
 {
-    public class Loan
+    public  class Installment
     {
         [Key]
-        public int LoanId { get; set; } 
-        public string LoanDescription { get; set;}
+        public int InstallmentId { get; set; }  
+        public Loan Loan { get; set; }
 
-        public decimal LoanValue { get; set; }
-
-        public Customer Customer { get; set; }
+        public decimal InstallmentValue { get; set; }
     }
 }

@@ -22,7 +22,7 @@ AS
 	PRINT @LoanInterest
 
 	INSERT INTO dbo.Installments
-	(LoanId, Installment)
+	(Loan_LoanId, InstallmentValue)
 	SELECT @LoanId, @LoanInterest
 	
 

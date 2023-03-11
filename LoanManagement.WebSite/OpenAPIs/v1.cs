@@ -1248,8 +1248,8 @@ namespace Management
         [Newtonsoft.Json.JsonProperty("LoanDescription", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public string LoanDescription { get; set; }
     
-        [Newtonsoft.Json.JsonProperty("Installment", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public double? Installment { get; set; }
+        [Newtonsoft.Json.JsonProperty("InstallmentValue", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        public double? InstallmentValue { get; set; }
     
         [Newtonsoft.Json.JsonProperty("InstallmentId", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public int? InstallmentId { get; set; }
