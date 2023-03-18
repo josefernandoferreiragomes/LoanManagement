@@ -18,8 +18,11 @@ namespace LoanManagement.WebSite.Controllers
         {
             return View();
         }
+        public ActionResult AddLoanInstallment()
+        {
+            return View();
+        }
 
-      
 
         public async Task<ActionResult> LoanInstallments(InstallmentViewModel inputModel)
         {
