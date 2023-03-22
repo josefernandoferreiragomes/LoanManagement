@@ -8,7 +8,8 @@ namespace LoanManagement.Interfaces
 {
     public interface ILoanManagerRepository
     {
-        List<Customer> GetCustomer(int id);
+        //List<Customer> GetCustomer();
+        List<Customer> GetCustomer(string name);
         CustomerLoanInstallmentDBOut GetPageOfCustomerLoanInstallment(CustomerLoaInstallmentDBIn objIn);
     }
 }

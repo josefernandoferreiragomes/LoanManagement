@@ -124,7 +124,8 @@
     <Compile Include="Controllers\InstallmentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Data\ApiLoanDataWrapperClass.cs" />
-    <Compile Include="Factories\ClientFactory.cs" />
+    <Compile Include="Factories\APIClientFactoryGeneric.cs" />
+    <Compile Include="Factories\ConcreteAPIClientFactoryGeneric.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

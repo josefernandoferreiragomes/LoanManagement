@@ -15,6 +15,9 @@ connect to local db
 api
 	https://www.tutorialspoint.com/asp.net_mvc/asp.net_mvc_web_api.htm
 
+api paging
+	https://code-maze.com/paging-aspnet-core-webapi/
+
 call api local
 	http://localhost:51852/Api/LoanManagement/
 	or

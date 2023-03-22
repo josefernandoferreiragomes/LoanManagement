@@ -1,0 +1,7 @@
+have different database implementations
+1> code first for database A
+2> database first for database B
+
+filter and paging customer data
+	https://code-maze.com/paging-aspnet-core-webapi/
+

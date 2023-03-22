@@ -16,7 +16,7 @@ namespace LoanManagement.WebSite.Data
 
             List<Management.Customer> response = new List<Management.Customer>();
             
-            ClientFactory<Management.LoanManagerClient> clientFactory = new ClientFactory<Management.LoanManagerClient>();
+            ConcreteAPIClientFactoryGeneric<Management.LoanManagerClient> clientFactory = new ConcreteAPIClientFactoryGeneric<Management.LoanManagerClient>();
             Management.LoanManagerClient client = clientFactory.GetClient();
 
             try
@@ -45,7 +45,7 @@ namespace LoanManagement.WebSite.Data
 
             List<Management.CustomerLoanInstallmentDBOutItem> response = new List<Management.CustomerLoanInstallmentDBOutItem>();
 
-            ClientFactory<Management.LoanInstallmentClient> clientFactory = new ClientFactory<Management.LoanInstallmentClient>();
+            ConcreteAPIClientFactoryGeneric<Management.LoanInstallmentClient> clientFactory = new ConcreteAPIClientFactoryGeneric<Management.LoanInstallmentClient>();
             Management.LoanInstallmentClient client = clientFactory.GetClient();
 
             try

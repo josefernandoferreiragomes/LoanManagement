@@ -21,9 +21,13 @@ namespace LoanManagement.Controllers
         // GET api/values
         public IEnumerable<Customer> Get()
         {
-            return _LoanManagementRepository.GetCustomer(1);
+            return _LoanManagementRepository.GetCustomer("a");
         }
-
+        //// GET api/values/5
+        //public IEnumerable<Customer> Get(string name)
+        //{
+        //    return _LoanManagementRepository.GetCustomer(name);
+        //}
         // GET api/values/5
         public string Get(int id)
         {

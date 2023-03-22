@@ -13,7 +13,7 @@ namespace LoanManagement.DB.DaoSqlExecuters
     public class LoanManagementDBExecuter
     {
         SqlConnection sqlCon = null;
-        String SqlconString = ConfigurationManager.ConnectionStrings["LoanManagement.DB.Dao.LoanManagementDBContext"].ConnectionString;
+        String SqlconString = ConfigurationManager.ConnectionStrings["LoanManagementDBFirst"].ConnectionString;
         public CustomerLoanInstallmentDBOut CustomerInstallmentGetPage(CustomerLoaInstallmentDBIn objIn)
         {
             CustomerLoanInstallmentDBOut ObjDbOut =new CustomerLoanInstallmentDBOut();

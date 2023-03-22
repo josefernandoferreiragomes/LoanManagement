@@ -17,10 +17,14 @@ namespace LoanManagement.Repositories
         { 
             _repository= ApplicationContainer.GetContainer().Resolve<LoanManagement.DB.Interfaces.ILoanManagerRepository>();
         }
+        //public List<Customer> GetCustomer()
+        //{
+        //    return _repository.GetCustomers();
 
-        public List<Customer> GetCustomer(int id)
+        //}
+        public List<Customer> GetCustomer(string name)
         {
-            return _repository.GetCustomers();
+            return _repository.GetCustomers().Where(c=>c.CustomerName.Contains(name)).ToList();
             
         }
 
