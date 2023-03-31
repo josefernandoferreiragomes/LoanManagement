@@ -87,3 +87,11 @@ datepicker
 
 SQL
 	https://www.dotnettricks.com/learn/sqlserver/difference-between-cte-and-temp-table-and-table-variable
+
+Profiler
+	https://www.mssqltips.com/sqlservertip/3050/using-the-replay-feature-within-sql-server-profiler/
+
+Start applications
+	solution->configure startup projects
+	web > start without debugging
+	website > start
