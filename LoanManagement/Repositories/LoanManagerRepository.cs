@@ -12,11 +12,17 @@ namespace LoanManagement.Repositories
 {
     public class LoanManagerRepository:ILoanManagerRepository
     {
-        LoanManagement.DB.Interfaces.ILoanManagerRepository _repository;
-        public LoanManagerRepository(LoanManagement.DB.Interfaces.ILoanManagerRepository repository) 
-        { 
-            _repository= ApplicationContainer.GetContainer().Resolve<LoanManagement.DB.Interfaces.ILoanManagerRepository>();
+        LoanManagement.DB.Interfaces.IDBLoanManagerRepository _repository { get; set; }
+        public LoanManagerRepository()
+        {
+            _repository = ApplicationContainer.GetContainer().Resolve<LoanManagement.DB.Repositories.DBLoanManagerRepository>();
         }
+
+        public LoanManagerRepository(LoanManagement.DB.Interfaces.IDBLoanManagerRepository repository) 
+        { 
+            _repository= repository;
+        }        
+
         //public List<Customer> GetCustomer()
         //{
         //    return _repository.GetCustomers();

@@ -63,6 +63,8 @@ MVC Helpers
 	(basic)
 	https://www.tutorialsteacher.com/mvc/html-helpers
 	(complete)
+	https://dotnettutorials.net/lesson/listbox-html-helper-mvc/
+	(listbox)
 
 MVC Best practices
 	https://www.c-sharpcorner.com/Blogs/asp-net-mvc-best-practices
@@ -91,7 +93,31 @@ SQL
 Profiler
 	https://www.mssqltips.com/sqlservertip/3050/using-the-replay-feature-within-sql-server-profiler/
 
+Caching
+	https://www.c-sharpcorner.com/UploadFile/abhikumarvatsa/output-caching-in-mvc/
+
+Image Sprites:
+	https://www.c-sharpcorner.com/UploadFile/4fcb5a/image-sprite-using-css-in-mvc-5/
+
+Azure Devops environments
+	https://learn.microsoft.com/en-us/azure/deployment-environments/overview-what-is-azure-deployment-environments
+
+Rhino Mocks
+	https://adamprescott.net/2011/04/07/getting-started-with-rhino-mocks-aaa/
+	https://www.wrightfully.com/using-rhino-mocks-quick-guide-to-generating-mocks-and-stubs/
+
+Dependency injection
+	https://www.c-sharpcorner.com/article/dependency-injection-using-unity-resolve-dependency-of-dependencies/
+
+Initial Configuration:
+	Populate database
+			LoanManagement.DB.Dao.LoanManagementDBContext LoanManagement.DB.Tests->LoanManagementTest.cs->TestDbContextDbSeed
+			LoanManagementDB->Publish
+			LoanManagementDB->LoanManagementDB->scripts->PopulateDatabase.sql
+
 Start applications
 	solution->configure startup projects
 	web > start without debugging
 	website > start
+
+	

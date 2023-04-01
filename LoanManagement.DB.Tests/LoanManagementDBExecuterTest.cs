@@ -12,7 +12,7 @@ namespace LoanManagement.DB.Tests
         public void Given_CustomerId_When_ThereIsLoanInstallmentDataOrNot_Then_LoanInstallmentIsReturned()
         {
             //Arrange
-            LoanManagerRepository repository = new LoanManagerRepository();
+            DBLoanManagerRepository repository = new DBLoanManagerRepository();
             CustomerLoaInstallmentDBIn objIn = new CustomerLoaInstallmentDBIn();
 
             objIn.CustomerId = 4;

@@ -123,6 +123,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\InstallmentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoanController.cs" />
     <Compile Include="Data\ApiLoanDataWrapperClass.cs" />
     <Compile Include="Factories\APIClientFactoryGeneric.cs" />
     <Compile Include="Factories\ConcreteAPIClientFactoryGeneric.cs" />
@@ -130,6 +131,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AddCustomerViewmodel.cs" />
+    <Compile Include="Models\SimulateLoanViewModel.cs" />
     <Compile Include="Models\CustomerFormCollectionViewModel.cs" />
     <Compile Include="Models\CustomerType.cs" />
     <Compile Include="Models\Intallment.cs" />
@@ -211,6 +213,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\LoanManager\LoanManager.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\SimulateLoan\SimulateLoan.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -231,6 +234,7 @@
     <Content Include="Views\Home\AddCustomer.cshtml" />
     <Content Include="Views\Home\AddCustomerFormCollection.cshtml" />
     <Content Include="Views\Installment\AddLoanInstallment.cshtml" />
+    <Content Include="Views\Loan\SimulateLoan.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

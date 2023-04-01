@@ -11,11 +11,11 @@ using System.Threading.Tasks;
 
 namespace LoanManagement.DB.Repositories
 {
-    public class LoanManagerRepository : ILoanManagerRepository
+    public class DBLoanManagerRepository : IDBLoanManagerRepository
     {
-        private LoanManagementDBContext _dbContext;
-        private LoanManagementDBExecuter _dbExecuter;
-        public LoanManagerRepository() 
+        LoanManagementDBContext _dbContext { get; set; }
+        LoanManagementDBExecuter _dbExecuter { get; set; }
+        public DBLoanManagerRepository() 
         { 
             _dbContext = new LoanManagementDBContext();
             _dbExecuter= new LoanManagementDBExecuter();

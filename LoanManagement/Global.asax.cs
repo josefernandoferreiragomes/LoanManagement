@@ -29,7 +29,7 @@ namespace LoanManagement
 
 
             ApplicationContainer.GetContainer().RegisterSingleton<LoanManagement.Interfaces.ILoanManagerRepository, LoanManagement.Repositories.LoanManagerRepository >();
-            ApplicationContainer.GetContainer().RegisterSingleton<LoanManagement.DB.Interfaces.ILoanManagerRepository, LoanManagement.DB.Repositories.LoanManagerRepository>();
+            ApplicationContainer.GetContainer().RegisterSingleton<LoanManagement.DB.Interfaces.IDBLoanManagerRepository, LoanManagement.DB.Repositories.DBLoanManagerRepository>();
 
             
         }

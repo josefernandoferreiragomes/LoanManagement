@@ -19,6 +19,7 @@ $(function () {
         var customerData = {};  
         customerData.customerName = $("#CustomerName").val();
         customerData.customerTypeId = $("#CustomerTypeId").val();
+        customerData.dateOfBirth = $("#CustomerDateOfBirth").val();
         var stringCustomerData = JSON.stringify(customerData);
         $.ajax({  
             type: "POST",  

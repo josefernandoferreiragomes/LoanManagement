@@ -63,13 +63,22 @@ namespace LoanManagement.WebSite.Controllers
         [HttpPost]
         public ActionResult AddCustomer(Customer customer)
         {
-            
-            //TODO Send information to API
             AddCustomerViewmodel addCustomerViewmodel = FillAddCustomerViewModel(customer.CustomerTypeId);
-            addCustomerViewmodel.customer = new Customer();
-            addCustomerViewmodel.customer.CustomerName= customer.CustomerName;
-            addCustomerViewmodel.customer.CustomerTypeId= customer.CustomerTypeId;
-            addCustomerViewmodel.Message = "Customer successfully added";
+
+            if (ModelState.IsValid)
+            {
+                //TODO Send information to API
+                
+                addCustomerViewmodel.customer = new Customer();
+                addCustomerViewmodel.customer.CustomerName = customer.CustomerName;
+                addCustomerViewmodel.customer.CustomerTypeId = customer.CustomerTypeId;
+                addCustomerViewmodel.Message = "Customer successfully added";
+            }
+            else
+            {
+                addCustomerViewmodel.Message = "Customer form with errors";
+            }
+            
             
             return View(addCustomerViewmodel);
         }

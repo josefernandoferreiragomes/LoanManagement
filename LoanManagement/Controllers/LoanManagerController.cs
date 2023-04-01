@@ -1,4 +1,5 @@
 ﻿using LoanManagement.DB.Data;
+using LoanManagement.Interfaces;
 using LoanManagement.Platform.Container;
 using System.Collections.Generic;
 using System.Web.Http;
@@ -6,18 +7,19 @@ using Unity;
 
 namespace LoanManagement.Controllers
 {
-    public class LoanManagercontroller : ApiController
+    public class LoanManagerController : ApiController, ILoanManagementController
     {
         LoanManagement.Interfaces.ILoanManagerRepository _LoanManagementRepository { get; set; }
-        //public LoanManagementController() { }
-        //public LoanManagementController(LoanManagement.Interfaces.ILoanManagerRepository repository) 
-        //{
-        //    _LoanManagementRepository = repository;
-        //}
-        public LoanManagercontroller()
+        
+        public LoanManagerController()
         {
-            _LoanManagementRepository = ApplicationContainer.GetContainer().Resolve<LoanManagement.Interfaces.ILoanManagerRepository>();
+            _LoanManagementRepository = ApplicationContainer.GetContainer().Resolve<LoanManagement.Repositories.LoanManagerRepository>();
         }
+        public LoanManagerController(LoanManagement.Interfaces.ILoanManagerRepository repository)
+        {
+            _LoanManagementRepository = repository;
+        }
+        
         // GET api/values
         public IEnumerable<Customer> Get()
         {

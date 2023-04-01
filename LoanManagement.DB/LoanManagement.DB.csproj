@@ -72,9 +72,9 @@
     <Compile Include="Data\CustomerLoanInstallmentDBOut.cs" />
     <Compile Include="Data\Installment.cs" />
     <Compile Include="Data\Loan.cs" />
-    <Compile Include="Interfaces\ILoanManagerRepository.cs" />
+    <Compile Include="Interfaces\IDBLoanManagerRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\LoanManagerRepository.cs" />
+    <Compile Include="Repositories\DBLoanManagerRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

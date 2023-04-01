@@ -26,6 +26,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanManagement.WebSite.Test
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "LoanManagementDB", "LoanManagementDB\LoanManagementDB.sqlproj", "{72CC4F57-E769-4BE5-8042-1E6C5BA5D68D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanManagement.Web.UnitTests", "LoanManagement.Web.UnitTests\LoanManagement.Web.UnitTests.csproj", "{AF351B45-16F8-496D-BDF9-B43F0548AA05}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -66,6 +68,10 @@ Global
 		{72CC4F57-E769-4BE5-8042-1E6C5BA5D68D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72CC4F57-E769-4BE5-8042-1E6C5BA5D68D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{72CC4F57-E769-4BE5-8042-1E6C5BA5D68D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{AF351B45-16F8-496D-BDF9-B43F0548AA05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF351B45-16F8-496D-BDF9-B43F0548AA05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF351B45-16F8-496D-BDF9-B43F0548AA05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF351B45-16F8-496D-BDF9-B43F0548AA05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

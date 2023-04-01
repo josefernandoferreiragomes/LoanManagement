@@ -54,7 +54,7 @@
                 @Html.LabelFor(m => m.customer.DateOfBirth)
             </div>
             <div class="col-lg-2">
-                @Html.TextBoxFor(m => m.customer.DateOfBirth, new {@class = "datepicker"})
+                @Html.TextBoxFor(m => m.customer.DateOfBirth, new { id = "CustomerDateOfBirth", @class = "datepicker"})
             </div>
         </div>
         <div class="row">
