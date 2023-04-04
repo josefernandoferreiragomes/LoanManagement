@@ -1,5 +1,6 @@
 ﻿using LoanManagement.DB.Dao;
 using LoanManagement.DB.Data;
+using LoanManagement.DB.Repositories;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
@@ -52,7 +53,7 @@ namespace LoanManagement.DB.Tests
             using (var db = new LoanManagementDBContext())
             {
                 // Create and save a new Customer
-                
+
                 var name = "Paul";
 
                 var customer = new Customer { CustomerName = name };
@@ -63,7 +64,7 @@ namespace LoanManagement.DB.Tests
                 //db.SaveChanges();
 
                 //// Display all customers from the database
-                var query = from b in db.Customers.ToList<Customer>()                            
+                var query = from b in db.Customers.ToList<Customer>()
                             select b;
 
                 Console.WriteLine("All customers in the database:");
@@ -72,6 +73,22 @@ namespace LoanManagement.DB.Tests
                     Console.WriteLine(item.CustomerName);
                 }
             }
+        }
+
+        [TestMethod]
+        public void TestPagination()
+        {
+
+            //arrange
+            var db = new DBLoanManagerRepository();
+
+
+            //act
+            IEnumerable<Customer> filteredCustomers = db.GetPageOfClassGeneric(2, 2, "client");
+
+            //assert
+            Assert.IsNotNull(filteredCustomers);
+
         }
     }
 }

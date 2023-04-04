@@ -29,7 +29,11 @@ namespace LoanManagement.Web.UnitTests.Mocks
             return customerListMock;
         }
 
-        
+        public IEnumerable<Customer> GetPageOfClassGeneric(int page, int pageSize, string nameFilter)
+        {
+            throw new NotImplementedException();
+        }
+
         public CustomerLoanInstallmentDBOut GetPageOfCustomerLoanInstallment(CustomerLoaInstallmentDBIn objIn)
         {
             throw new NotImplementedException();

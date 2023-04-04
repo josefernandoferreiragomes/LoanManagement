@@ -28,6 +28,17 @@ namespace LoanManagement.DB.Repositories
             return query.ToList();
         }
 
+        public IEnumerable<Customer> GetPageOfClassGeneric(int page, int pageSize, string nameFilter)
+        {
+            var query = _dbContext.Customers
+                        .OrderBy(on=>on.CustomerName)
+                        .Where(c => c.CustomerName.Contains(nameFilter))
+                        .Skip((page-1)*pageSize)
+                        .Take(pageSize);
+
+            return query.ToList();
+        }
+
         public CustomerLoanInstallmentDBOut GetPageOfCustomerLoanInstallment(CustomerLoaInstallmentDBIn objIn)
         {
             CustomerLoanInstallmentDBOut objOut = new CustomerLoanInstallmentDBOut();
