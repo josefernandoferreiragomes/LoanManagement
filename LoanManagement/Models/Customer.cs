@@ -5,17 +5,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LoanManagement.DB.Data
+namespace LoanManagement.Web.Models
 {
 
-    public class Customer
+    public class CustomerItem
     {
-        public Customer() { }
-
-        [Key]
+        public CustomerItem() { }
         public int CustomerId { get; set; }
-        [MaxLength(50)]
+        
         public string CustomerName { get; set; } 
-        public List<Loan> LoanList { get; set; }
+        
     }
 }

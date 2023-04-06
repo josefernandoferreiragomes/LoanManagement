@@ -109,6 +109,8 @@ Rhino Mocks
 Dependency injection
 	https://www.c-sharpcorner.com/article/dependency-injection-using-unity-resolve-dependency-of-dependencies/
 
+AutoMapper
+	https://dotnettutorials.net/lesson/automapper-in-c-sharp/
 Initial Configuration:
 	Populate database
 			LoanManagement.DB.Dao.LoanManagementDBContext LoanManagement.DB.Tests->LoanManagementTest.cs->TestDbContextDbSeed

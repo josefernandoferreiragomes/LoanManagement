@@ -23,7 +23,8 @@ namespace LoanManagement.Controllers
         // GET api/values
         public IEnumerable<Customer> Get()
         {
-            return _LoanManagementRepository.GetCustomer("a");
+            IEnumerable<Customer> customers = _LoanManagementRepository.GetCustomer("a");
+            return customers;
         }
         //// GET api/values/5
         //public IEnumerable<Customer> Get(string name)

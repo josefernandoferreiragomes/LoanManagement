@@ -1,4 +1,5 @@
 ﻿using LoanManagement.DB.Data;
+using LoanManagement.Web.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,8 @@ namespace LoanManagement.Interfaces
     public interface ILoanManagerRepository
     {
         //List<Customer> GetCustomer();
-        List<Customer> GetCustomer(string name);
+        IEnumerable<Customer> GetCustomer(string name);
+        List<CustomerItem> GetPageOfClassGeneric(int page, int pageSize, string nameFilter);
         CustomerLoanInstallmentDBOut GetPageOfCustomerLoanInstallment(CustomerLoaInstallmentDBIn objIn);
     }
 }

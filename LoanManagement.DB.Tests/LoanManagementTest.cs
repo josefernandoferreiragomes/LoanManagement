@@ -84,7 +84,7 @@ namespace LoanManagement.DB.Tests
 
 
             //act
-            IEnumerable<Customer> filteredCustomers = db.GetPageOfClassGeneric(2, 2, "client");
+            IEnumerable<Customer> filteredCustomers = db.GetPageOfClassGeneric(5, 3, "1");
 
             //assert
             Assert.IsNotNull(filteredCustomers);

@@ -1,6 +1,8 @@
-﻿using LoanManagement.DB.Interfaces;
+﻿using LoanManagement.DB.Data;
+using LoanManagement.DB.Interfaces;
 using LoanManagement.DB.Repositories;
 using LoanManagement.Platform.Container;
+using LoanManagement.Web.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,7 +28,7 @@ namespace LoanManagement
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-
+            Platform.Mapper.CustomMapper.RegisterMapping<Customer, CustomerItem>();
 
             ApplicationContainer.GetContainer().RegisterSingleton<LoanManagement.Interfaces.ILoanManagerRepository, LoanManagement.Repositories.LoanManagerRepository >();
             ApplicationContainer.GetContainer().RegisterSingleton<LoanManagement.DB.Interfaces.IDBLoanManagerRepository, LoanManagement.DB.Repositories.DBLoanManagerRepository>();

@@ -29,7 +29,7 @@ namespace LoanManagement.Web.UnitTests.Mocks
             return customerListMock;
         }
 
-        public IEnumerable<Customer> GetPageOfClassGeneric(int page, int pageSize, string nameFilter)
+        public List<Customer> GetPageOfClassGeneric(int page, int pageSize, string nameFilter)
         {
             throw new NotImplementedException();
         }
