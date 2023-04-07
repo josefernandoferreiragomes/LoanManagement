@@ -12,6 +12,11 @@ namespace LoanManagement.Web.UnitTests.Mocks
     {       
         public DBLoanManagerRepositoryMock() { }
 
+        public Customer CreateCustomer(Customer customer)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Customer> GetCustomers()
         {
             List<Customer> customerListMock = new List<Customer>{
@@ -35,6 +40,11 @@ namespace LoanManagement.Web.UnitTests.Mocks
         }
 
         public CustomerLoanInstallmentDBOut GetPageOfCustomerLoanInstallment(CustomerLoaInstallmentDBIn objIn)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Customer UpdateCustomer(Customer customer)
         {
             throw new NotImplementedException();
         }

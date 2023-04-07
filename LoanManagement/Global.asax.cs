@@ -29,6 +29,7 @@ namespace LoanManagement
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             Platform.Mapper.CustomMapper.RegisterMapping<Customer, CustomerItem>();
+            Platform.Mapper.CustomMapper.RegisterMapping<CustomerItem, Customer>();
 
             ApplicationContainer.GetContainer().RegisterSingleton<LoanManagement.Interfaces.ILoanManagerRepository, LoanManagement.Repositories.LoanManagerRepository >();
             ApplicationContainer.GetContainer().RegisterSingleton<LoanManagement.DB.Interfaces.IDBLoanManagerRepository, LoanManagement.DB.Repositories.DBLoanManagerRepository>();

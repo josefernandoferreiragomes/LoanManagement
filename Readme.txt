@@ -122,4 +122,9 @@ Start applications
 	web > start without debugging
 	website > start
 
+To See API definition
+	in ASP.NEt api homepage -> click API
+	in swagger, browse to http://localhost:51852/swagger/
+		to get api definition, copy text texbox on top with http://localhost:51852/swagger/docs/v1
+			example request http://localhost:51852/api/CustomerItem?SearchKeyword=client
 	

@@ -10,6 +10,8 @@ TODO:
 	filter and paging customer data
 		https://code-maze.com/paging-aspnet-core-webapi/
 
+	logging Nlog
+		https://github.com/NLog/NLog/wiki/Tutorial
 
 Already done:
 	have different database implementations

@@ -5,6 +5,7 @@ using LoanManagement.DB.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity.Core.Metadata.Edm;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,6 +45,20 @@ namespace LoanManagement.DB.Repositories
                 customersOut.Add(tempCustomer);
             }
             return customersOut;
+        }
+
+        public Customer CreateCustomer(Customer customer)
+        {
+            _dbContext.Customers.Add(customer);
+            _dbContext.SaveChanges();
+            return customer;
+        }
+
+        public Customer UpdateCustomer(Customer customer)
+        {
+            _dbContext.Customers.AddOrUpdate(customer);
+            _dbContext.SaveChanges();
+            return customer;
         }
 
         public CustomerLoanInstallmentDBOut GetPageOfCustomerLoanInstallment(CustomerLoaInstallmentDBIn objIn)

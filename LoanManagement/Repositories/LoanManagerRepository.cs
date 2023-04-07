@@ -56,6 +56,17 @@ namespace LoanManagement.Repositories
             
             return customersSV;
         }
-
+        public CustomerItem CreateCustomer(CustomerItem customerItem)
+        {
+            Customer customer = CustomMapper.Map<CustomerItem, Customer>(customerItem);
+            _repository.CreateCustomer(customer);
+            return customerItem;
+        }
+        public CustomerItem UpdateCustomer(CustomerItem customerItem)
+        {
+            Customer customer = CustomMapper.Map<CustomerItem, Customer>(customerItem);
+            _repository.UpdateCustomer(customer);
+            return customerItem;
+        }
     }
 }

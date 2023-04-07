@@ -193,6 +193,7 @@
     <Compile Include="Interfaces\ILoanManagementController.cs" />
     <Compile Include="Interfaces\ILoanManagerRepository.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\GenericPageParameters.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\LoanManagerRepository.cs" />
   </ItemGroup>
