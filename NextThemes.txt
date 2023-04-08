@@ -7,13 +7,13 @@ TODO:
 			automatic monthly payment (for 1y), but editable
 			automatic installment duration (1y), but editable			
 
+Already done:
 	filter and paging customer data
 		https://code-maze.com/paging-aspnet-core-webapi/
 
 	logging Nlog
 		https://github.com/NLog/NLog/wiki/Tutorial
 
-Already done:
 	have different database implementations
 		1> code first for database A
 		2> database first for database B

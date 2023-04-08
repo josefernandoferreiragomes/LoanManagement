@@ -131,6 +131,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AddCustomerViewmodel.cs" />
+    <Compile Include="Models\CustomerItem.cs" />
+    <Compile Include="Models\SearchCustomersViewModel.cs" />
     <Compile Include="Models\SimulateLoanViewModel.cs" />
     <Compile Include="Models\CustomerFormCollectionViewModel.cs" />
     <Compile Include="Models\CustomerType.cs" />
@@ -235,6 +237,7 @@
     <Content Include="Views\Home\AddCustomerFormCollection.cshtml" />
     <Content Include="Views\Installment\AddLoanInstallment.cshtml" />
     <Content Include="Views\Loan\SimulateLoan.cshtml" />
+    <Content Include="Views\Home\SearchCustomers.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

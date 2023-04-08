@@ -18,6 +18,24 @@ namespace LoanManagement.WebSite.Controllers
             return View();
         }
 
+        [HttpGet]
+        public ActionResult SearchCustomers()
+        {
+            SearchCustomersViewModel model = new SearchCustomersViewModel();
+            model.Customers = new List<CustomerItem>();
+            return View(model);
+        }
+        [HttpPost]
+        public async Task<ActionResult> SearchCustomers(SearchCustomersViewModel model)
+        {
+            model.Customers = null;
+            model.Customers = await ApiLoanDataWrapperClass.SearchCustomers(model.SearchKeword, 2, 2);
+
+            //mock
+            //CustomerItem customer = new CustomerItem { Id = 1 , CustomerName = "customerMock"};
+            //model.Customers=new List<CustomerItem> { customer};
+            return View(model);
+        }
         public ActionResult About()
         {
 

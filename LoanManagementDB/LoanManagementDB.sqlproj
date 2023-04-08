@@ -157,6 +157,7 @@
     <Build Include="dbo\Stored Procedures\SpGetAllCustomersWithOrWithoutLoanInstallments.sql" />
     <Build Include="dbo\Stored Procedures\SpGetPageOfCustomerInstalmentsRowNumber.sql" />
     <Build Include="dbo\Stored Procedures\SpGetPageOfCustomerInstalmentsRNPage.sql" />
+    <Build Include="dbo\Stored Procedures\SpGetPageOfCustomerInstalmentsRNPageOffsetFetch.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="LoanManagementDB.publishLocal.xml" />

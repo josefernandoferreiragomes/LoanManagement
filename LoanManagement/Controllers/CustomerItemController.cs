@@ -27,7 +27,7 @@ namespace LoanManagement.Controllers
         public IEnumerable<CustomerItem> Get([FromUri] GenericPageParameters parameters)
         
         {
-            return _LoanManagementRepository.GetPageOfClassGeneric(3,3, parameters.SearchKeyword);
+            return _LoanManagementRepository.GetPageOfClassGeneric(parameters.CurrentPage,parameters.PageSize, parameters.SearchKeyword);
         }
 
         // POST api/values
@@ -44,6 +44,7 @@ namespace LoanManagement.Controllers
         // PUT api/values/5
         public CustomerItem Put(int id, [FromBody] CustomerItem customer)
         {
+
             _LoanManagementRepository.UpdateCustomer(customer);
             CustomerItem customerItem = customer;
             if (customerItem == null)
