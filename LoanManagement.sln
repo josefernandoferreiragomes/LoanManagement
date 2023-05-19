@@ -28,6 +28,8 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "LoanManagementDB", "LoanMan
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanManagement.Web.UnitTests", "LoanManagement.Web.UnitTests\LoanManagement.Web.UnitTests.csproj", "{AF351B45-16F8-496D-BDF9-B43F0548AA05}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tutorial", "Tutorial", "{48EF0DCC-E3FA-4B94-95E0-99E8E60DD97A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{48EF0DCC-E3FA-4B94-95E0-99E8E60DD97A} = {EE40F18D-C87F-4160-AF0B-7594C0A6035D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {22013050-8809-4A84-87E9-B77C0C794F03}
