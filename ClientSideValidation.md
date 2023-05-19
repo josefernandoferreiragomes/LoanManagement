@@ -23,7 +23,7 @@ Client side validation
 		    }
 
 	```
-</detail>
+</details>
 <details>
 	<summary>_Layout.cshtml<summary>
 	```csharp
