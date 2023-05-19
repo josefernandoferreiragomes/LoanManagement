@@ -30,8 +30,10 @@ Client side validation
 <summary>_Layout.cshtml<summary>
 
 ```csharp
+	
 	@Scripts.Render("~/bundles/jquery")
 	@Scripts.Render("~/bundles/jqueryval")
+	
 ```
 		
 </details>
