@@ -1,7 +1,9 @@
 Client side validation
 <details>
 <summary>View</summary>
+	
 ```csharp
+	
 	@using (Html.BeginForm(actionName: "AddCustomer", controllerName: "Home", method: FormMethod.Post))
 	    {
 		<div class="row">
@@ -19,6 +21,7 @@ Client side validation
 		</div>
 		(...)
 	    }
+	
 ```
 </detail>
 	
