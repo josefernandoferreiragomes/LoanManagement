@@ -29,6 +29,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanManagement.Web.UnitTests", "LoanManagement.Web.UnitTests\LoanManagement.Web.UnitTests.csproj", "{AF351B45-16F8-496D-BDF9-B43F0548AA05}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tutorial", "Tutorial", "{48EF0DCC-E3FA-4B94-95E0-99E8E60DD97A}"
+	ProjectSection(SolutionItems) = preProject
+		ClientSideValidation.md = ClientSideValidation.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
