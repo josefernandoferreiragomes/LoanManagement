@@ -24,6 +24,7 @@ Client side validation
 
 	```
 </details>
+
 <details>
 	<summary>_Layout.cshtml<summary>
 		
@@ -33,6 +34,7 @@ Client side validation
 	```
 		
 </details>
+		
 <details>
 	<summary>BundleConfig.cs</summary>
 	
