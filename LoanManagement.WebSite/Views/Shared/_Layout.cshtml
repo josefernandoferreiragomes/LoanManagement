@@ -43,12 +43,13 @@
         </footer>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")    
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
     <script>
         var applicationURL = "http://localhost:61104/Home/";
-            //GET FROM CONFIG
+                //GET FROM CONFIG
     </script>
 </body>
 </html>
