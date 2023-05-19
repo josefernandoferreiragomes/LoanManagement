@@ -1,4 +1,5 @@
 Client side validation
+
 <details>
 	<summary>View.cshtml</summary>
 	
