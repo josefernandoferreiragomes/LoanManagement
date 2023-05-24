@@ -61,7 +61,7 @@
 ```
 ### AddCustomer Page
 <picture> 
- <img alt="YOUR-ALT-TEXT" src=".\FormShowingValidationMessage.png">
+ <img alt="FormShowingValidationMessage" src=".\FormShowingValidationMessage.png">
 </picture>
 
 ### CustomerController.cs
