@@ -8,7 +8,7 @@
 <p>Customer information.</p>
 
 <div class="container">
-    @using (Html.BeginForm(actionName: "AddCustomer", controllerName: "Home", method: FormMethod.Post))
+    @using (Html.BeginForm(actionName: "AddCustomer", controllerName: "Customer", method: FormMethod.Post))
     {
         <div class="row">
             <div class="col-lg-2">
@@ -51,10 +51,10 @@
         </div>
         <div class="row">
             <div class="col-lg-2">
-                @Html.LabelFor(m => m.customer.DateOfBirth)
+                @Html.LabelFor(m => m.customer.DateOfBirth, new { @class = "form-text" })
             </div>
             <div class="col-lg-2">
-                @Html.TextBoxFor(m => m.customer.DateOfBirth, new { id = "CustomerDateOfBirth", @class = "datepicker"})
+                @Html.TextBoxFor(m => m.customer.DateOfBirth, "", new { @class = "datepicker  form-control", @id = "CustomerDateOfBirth" })
             </div>
         </div>
         <div class="row">
@@ -81,6 +81,6 @@
     {
     @Scripts.Render("~/bundles/jqueryui")
     @Styles.Render("~/Content/cssjqryUi")
-    <script src="~/Scripts/LoanManager/LoanManager.js"></script>
+    <script src="~/Scripts/Customer/Customer.js"></script>
 
 }

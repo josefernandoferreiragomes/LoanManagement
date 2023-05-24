@@ -3,12 +3,12 @@
 
 $(document).ready(function () {
     $(".datepicker").datepicker({
-        dateFormat: "dd-mm-yy",
+        dateFormat: "yy-mm-dd",
         changemonth: true,
-        changeyear: true,
-        beforeShow: function (input, inst) {
-            $(inst.dpDiv).addClass('bg-warning');
-        }
+        changeyear: true//,
+        //beforeShow: function (input, inst) {
+        //    $(inst.dpDiv).addClass('bg-warning');
+        //}
     });
 });
 
