@@ -75,12 +75,12 @@ It will not stop at the breakpoint, because client-side validation is active and
 </picture>
 
 
-## If ClientValidation Disabled on Web.config, or any missconfiguration, it will stop at breakpoint on CustomerController.
-
-### And it will be the server-side code to enforce the validations instead of the client-side code
+## If ClientValidation is disabled on Web.config, or any missconfiguration, it will stop at the breakpoint on CustomerController
 
 ### CustomerController.cs
 
 <picture>
 	<img alt="CustomerControllerDebug" src=".\CustomerControllerDebug.png">
 </picture>
+
+And it will be the server-side code to enforce the validations instead of the client-side code
