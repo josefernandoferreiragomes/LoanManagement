@@ -1,7 +1,6 @@
 Client side validation
 
-<details>
-<summary>View.cshtml</summary>
+##View.cshtml
 
 ```csharp
 
@@ -24,10 +23,9 @@ Client side validation
 	    }
 
 ```
-</details>
 
-<details>
-<summary>Layout.cshtml<summary>
+
+##Layout.cshtml
 
 ```csharp
 	
@@ -36,10 +34,7 @@ Client side validation
 	
 ```
 		
-</details>
-		
-<details>
-<summary>BundleConfig.cs</summary>
+##BundleConfig.cs
 
 ```csharp
     public class BundleConfig
@@ -53,8 +48,6 @@ Client side validation
 	    bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
 			"~/Scripts/jquery.validate*"));
 ```
-
-</details>
 
 <picture> 
  <img alt="YOUR-ALT-TEXT" src=".\FormShowingValidationMessage.png">
