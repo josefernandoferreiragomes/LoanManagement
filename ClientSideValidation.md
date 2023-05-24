@@ -1,6 +1,6 @@
 ## Client side validation
 
-### View.cshtml
+### AddCustomer.cshtml
 
 ```csharp
 
@@ -59,7 +59,20 @@
 	    <!-- ... -->
 	  </appSettings>
 ```
-
+### AddCustomer Page
 <picture> 
  <img alt="YOUR-ALT-TEXT" src=".\FormShowingValidationMessage.png">
+</picture>
+
+### CustomerController.cs
+
+<picture>
+	<img alt="CustomerController" src".\CustomerControllerNoDebug.png">
+</picture>
+
+
+## If ClientValidation Disabled on Web.config, or any missconfiguration, it will stop at breakpoint on CustomerController
+
+<picture>
+	<img alt="CustomerController" src".\CustomerControllerDebug.png">
 </picture>
