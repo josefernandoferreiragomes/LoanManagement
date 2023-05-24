@@ -67,12 +67,12 @@
 ### CustomerController.cs
 
 <picture>
-	<img alt="CustomerControllerNoDebug" src".\CustomerControllerNoDebug.png">
+	<img alt="CustomerControllerNoDebug" src=".\CustomerControllerNoDebug.png">
 </picture>
 
 
 ## If ClientValidation Disabled on Web.config, or any missconfiguration, it will stop at breakpoint on CustomerController
 
 <picture>
-	<img alt="CustomerControllerDebug" src".\CustomerControllerDebug.png">
+	<img alt="CustomerControllerDebug" src=".\CustomerControllerDebug.png">
 </picture>
