@@ -1,6 +1,6 @@
 Client side validation
 
-##View.cshtml
+## View.cshtml
 
 ```csharp
 
@@ -25,7 +25,7 @@ Client side validation
 ```
 
 
-##Layout.cshtml
+## Layout.cshtml
 
 ```csharp
 	
@@ -34,7 +34,7 @@ Client side validation
 	
 ```
 		
-##BundleConfig.cs
+## BundleConfig.cs
 
 ```csharp
     public class BundleConfig
