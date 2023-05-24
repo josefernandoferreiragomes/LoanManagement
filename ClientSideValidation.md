@@ -1,6 +1,6 @@
-Client side validation
+## Client side validation
 
-## View.cshtml
+### View.cshtml
 
 ```csharp
 
@@ -25,7 +25,7 @@ Client side validation
 ```
 
 
-## Layout.cshtml
+### Layout.cshtml
 
 ```csharp
 	
@@ -34,7 +34,7 @@ Client side validation
 	
 ```
 		
-## BundleConfig.cs
+### BundleConfig.cs
 
 ```csharp
     public class BundleConfig
@@ -47,6 +47,17 @@ Client side validation
 
 	    bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
 			"~/Scripts/jquery.validate*"));
+```
+### Web.config
+
+```xml
+	<configuration>
+	  <appSettings>
+	    <!-- ... -->
+	    <add key="ClientValidationEnabled" value="true" />
+	    <add key="UnobtrusiveJavaScriptEnabled" value="true" />
+	    <!-- ... -->
+	  </appSettings>
 ```
 
 <picture> 
