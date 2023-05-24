@@ -65,7 +65,9 @@
 <picture> 
  <img alt="FormShowingValidationMessage" src=".\FormShowingValidationMessage.png">
 </picture>
-we can submit the form without filling any of the fields and it will show the validation messages
+
+We can submit the form without filling any of the fields and it will show the validation messages
+
 ### CustomerController.cs
 It will not stop at the breakpoint, because client-side validation is active and well configured
 <picture>
