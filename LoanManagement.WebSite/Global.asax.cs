@@ -1,10 +1,12 @@
-﻿using System;
+﻿using LoanManagement.Platform.Container;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Unity;
 
 namespace LoanManagement.WebSite
 {
@@ -16,6 +18,9 @@ namespace LoanManagement.WebSite
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            ApplicationContainer.GetContainer().RegisterSingleton<LoanManagement.WebSite.Interfaces.IApiLoanRepository, LoanManagement.WebSite.Repository.ApiLoanRepository>();
+
         }
     }
 }

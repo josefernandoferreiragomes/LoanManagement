@@ -1,4 +1,6 @@
-﻿using LoanManagement.WebSite.Data;
+﻿using LoanManagement.Platform.Container;
+using LoanManagement.WebSite.Data;
+using LoanManagement.WebSite.Interfaces;
 using LoanManagement.WebSite.Models;
 using Newtonsoft.Json;
 using System;
@@ -8,11 +10,19 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using Unity;
 
 namespace LoanManagement.WebSite.Controllers
 {
     public class CustomerController : Controller
     {        
+
+        private Interfaces.IApiLoanRepository _loanRepository;
+
+        public CustomerController()
+        {
+            _loanRepository = ApplicationContainer.GetContainer().Resolve<LoanManagement.WebSite.Repository.ApiLoanRepository>();
+        }
 
         [HttpGet]
         public ActionResult SearchCustomers()
@@ -25,7 +35,7 @@ namespace LoanManagement.WebSite.Controllers
         public async Task<ActionResult> SearchCustomers(SearchCustomersViewModel model)
         {
             model.Customers = null;
-            model.Customers = await ApiLoanDataWrapperClass.SearchCustomers(model.SearchKeword, 2, 2);
+            model.Customers = await _loanRepository.SearchCustomers(model.SearchKeword, 2, 2);
 
             //mock
             //CustomerItem customer = new CustomerItem { Id = 1 , CustomerName = "customerMock"};
@@ -142,7 +152,7 @@ namespace LoanManagement.WebSite.Controllers
             customerViewModel.CustomerList = new List<Customer>();            
 
             List<Management.Customer> response;
-            response = await ApiLoanDataWrapperClass.ObtainCustomers();
+            response = await _loanRepository.ObtainCustomers();
 
             foreach (Management.Customer customerItem in response)
             {
