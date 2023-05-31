@@ -128,3 +128,14 @@ To See API definition
 		to get api definition, copy text texbox on top with http://localhost:51852/swagger/docs/v1
 			example request http://localhost:51852/api/CustomerItem?SearchKeyword=client
 	
+Git Merge
+	1 select branch in VS
+	2 pull / sync
+	3 do changes
+	4 commit
+	5 push
+	
+	6 select other branch in VS
+	7 compare with other branch (if necessary)
+	8 right click in first branch -> Merge into curent branch
+	9 push
