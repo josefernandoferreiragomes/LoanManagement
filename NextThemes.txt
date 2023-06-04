@@ -1,5 +1,9 @@
 TODO:
 	
+	fix ADO, with specific instructions
+	
+	widen unit testing
+
 	add installment -> simulate installment
 		create model and adapt controller and view and js for:
 			loan amount
