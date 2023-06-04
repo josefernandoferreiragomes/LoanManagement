@@ -18,6 +18,9 @@ namespace LoanManagement.DB.Dao
 
         public LoanManagementDBContext() : base("name=LoanManagement.DB.Dao.LoanManagementDBContext") 
         {
+            Database.SetInitializer<LoanManagementDBContext>(new CreateDatabaseIfNotExists<LoanManagementDBContext>());
+            
+            //for reset purposes
             //Database.SetInitializer<LoanManagementDBContext>(new DropCreateDatabaseAlways<LoanManagementDBContext>());
 
         }
