@@ -21,7 +21,7 @@ namespace LoanManagement.WebSite.Controllers
         public ActionResult About()
         {
 
-            ViewBag.Message = "Your Details page.";
+            ViewBag.Message = "Your application description page.";
             return View();
         }            
 

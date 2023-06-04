@@ -12,3 +12,12 @@
 2023-04-08 15:21:36.9788|INFO|LoanManagement.DB.Repositories.DBLoanManagerRepository|GetPageOfClassGeneric
 2023-05-19 14:39:16.1973|INFO|LoanManagement.DB.Repositories.DBLoanManagerRepository|GetPageOfClassGeneric
 2023-05-24 21:12:56.9696|INFO|LoanManagement.DB.Repositories.DBLoanManagerRepository|GetPageOfClassGeneric
+2023-06-03 14:14:13.6069|INFO|LoanManagement.DB.Repositories.DBLoanManagerRepository|GetPageOfClassGeneric
+2023-06-03 14:15:28.8725|INFO|LoanManagement.DB.Repositories.DBLoanManagerRepository|GetPageOfClassGeneric
+2023-06-04 10:57:13.6035|INFO|LoanManagement.DB.Repositories.DBLoanManagerRepository|GetPageOfClassGeneric
+2023-06-04 10:57:27.1823|INFO|LoanManagement.DB.Repositories.DBLoanManagerRepository|GetPageOfClassGeneric
+2023-06-04 10:57:30.9314|INFO|LoanManagement.DB.Repositories.DBLoanManagerRepository|GetPageOfClassGeneric
+2023-06-04 10:57:52.4433|INFO|LoanManagement.DB.Repositories.DBLoanManagerRepository|GetPageOfClassGeneric
+2023-06-04 10:58:24.0535|INFO|LoanManagement.DB.Repositories.DBLoanManagerRepository|GetPageOfClassGeneric
+2023-06-04 11:59:55.2285|INFO|LoanManagement.DB.Repositories.DBLoanManagerRepository|GetPageOfClassGeneric
+2023-06-04 12:05:00.2935|INFO|LoanManagement.DB.Repositories.DBLoanManagerRepository|GetPageOfClassGeneric

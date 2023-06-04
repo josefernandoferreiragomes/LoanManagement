@@ -1,0 +1,315 @@
+{
+  "id": "71bbdb35-5603-41ce-99bd-991262a36223",
+  "version": "2.0",
+  "name": "LoanManagementWebChromeTest",
+  "url": "http://localhost:61104",
+  "tests": [{
+    "id": "04cdc53d-fd11-415b-a6ba-ad8f26370add",
+    "name": "Test Customers 1",
+    "commands": [{
+      "id": "0b1fa48a-4128-4506-9e9c-61bf089433b5",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "72959aeb-920e-4fd3-8b92-0228860e5de9",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c8a11d28-9226-4e8c-ad8c-3f2e687491c2",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Customers",
+      "targets": [
+        ["linkText=Customers", "linkText"],
+        ["css=li:nth-child(4) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Customers')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/Customer/Customers')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Customers')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "aba48e3b-56e0-42fc-9647-93d9796d7ea0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Search Customers",
+      "targets": [
+        ["linkText=Search Customers", "linkText"],
+        ["css=li:nth-child(5) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Search Customers')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/Customer/SearchCustomers')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Search Customers')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b5372a7c-b76a-4c61-ae91-df64cb1d81a1",
+      "comment": "",
+      "command": "click",
+      "target": "id=SearchKeword",
+      "targets": [
+        ["id=SearchKeword", "id"],
+        ["name=SearchKeword", "name"],
+        ["css=#SearchKeword", "css:finder"],
+        ["xpath=//input[@id='SearchKeword']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7ec5a785-6ee7-4d14-9095-b38227821c04",
+      "comment": "",
+      "command": "type",
+      "target": "id=SearchKeword",
+      "targets": [
+        ["id=SearchKeword", "id"],
+        ["name=SearchKeword", "name"],
+        ["css=#SearchKeword", "css:finder"],
+        ["xpath=//input[@id='SearchKeword']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "jack"
+    }, {
+      "id": "a063e7ad-6db1-4274-9e8b-a9e2e5a3a02c",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(3) > input",
+      "targets": [
+        ["css=div:nth-child(3) > input", "css:finder"],
+        ["xpath=//input[@value='Search']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8fed33db-c7d7-46f2-8bbb-fa14c0a39ab0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Add Customer",
+      "targets": [
+        ["linkText=Add Customer", "linkText"],
+        ["css=li:nth-child(6) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Add Customer')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/Customer/AddCustomer')]", "xpath:href"],
+        ["xpath=//li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Add Customer')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "376c8a9f-451c-482b-93d0-9e34cc44d261",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col > input",
+      "targets": [
+        ["css=.col > input", "css:finder"],
+        ["xpath=//input[@value='Submit Form']", "xpath:attributes"],
+        ["xpath=//div[8]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bae1a868-1a8a-4e66-9545-d2981ac39553",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Add Customer",
+      "targets": [
+        ["linkText=Add Customer", "linkText"],
+        ["css=li:nth-child(6) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Add Customer')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/Customer/AddCustomer')]", "xpath:href"],
+        ["xpath=//li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Add Customer')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "18eb6caa-6dde-47ea-8bbb-e8b7a4f3a02b",
+      "comment": "",
+      "command": "click",
+      "target": "id=CustomerName",
+      "targets": [
+        ["id=CustomerName", "id"],
+        ["name=customer.CustomerName", "name"],
+        ["css=#CustomerName", "css:finder"],
+        ["xpath=//input[@id='CustomerName']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1d7a1e54-8b71-4023-a894-fd750e2efab5",
+      "comment": "",
+      "command": "type",
+      "target": "id=CustomerName",
+      "targets": [
+        ["id=CustomerName", "id"],
+        ["name=customer.CustomerName", "name"],
+        ["css=#CustomerName", "css:finder"],
+        ["xpath=//input[@id='CustomerName']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "new customer"
+    }, {
+      "id": "778f255f-9bea-41f1-babb-e7e491b34af8",
+      "comment": "",
+      "command": "click",
+      "target": "id=CustomerTypeId",
+      "targets": [
+        ["id=CustomerTypeId", "id"],
+        ["name=customer.CustomerTypeId", "name"],
+        ["css=#CustomerTypeId", "css:finder"],
+        ["xpath=//select[@id='CustomerTypeId']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"],
+        ["xpath=//select[contains(.,'Select Customer Type\nRetail\nCorporate')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "50503d1d-394f-4125-8286-05b916688aef",
+      "comment": "",
+      "command": "select",
+      "target": "id=CustomerTypeId",
+      "targets": [],
+      "value": "label=Retail"
+    }, {
+      "id": "338a90a9-3f62-4ca8-87f7-12cac8fd0479",
+      "comment": "",
+      "command": "click",
+      "target": "id=CustomerEmail",
+      "targets": [
+        ["id=CustomerEmail", "id"],
+        ["name=customer.Email", "name"],
+        ["css=#CustomerEmail", "css:finder"],
+        ["xpath=//input[@id='CustomerEmail']", "xpath:attributes"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "387acc77-0419-4a89-885e-e6435d15881c",
+      "comment": "",
+      "command": "type",
+      "target": "id=CustomerEmail",
+      "targets": [
+        ["id=CustomerEmail", "id"],
+        ["name=customer.Email", "name"],
+        ["css=#CustomerEmail", "css:finder"],
+        ["xpath=//input[@id='CustomerEmail']", "xpath:attributes"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": "new@customer.com"
+    }, {
+      "id": "54123443-9e5a-4613-a154-6b0066bb3714",
+      "comment": "",
+      "command": "click",
+      "target": "id=CustomerDateOfBirth",
+      "targets": [
+        ["id=CustomerDateOfBirth", "id"],
+        ["name=customer.DateOfBirth", "name"],
+        ["css=#CustomerDateOfBirth", "css:finder"],
+        ["xpath=//input[@id='CustomerDateOfBirth']", "xpath:attributes"],
+        ["xpath=//div[7]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "96fc5f66-6f9c-4b51-8814-25c7b9e8bac4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=14",
+      "targets": [
+        ["linkText=14", "linkText"],
+        ["css=.ui-state-hover", "css:finder"],
+        ["xpath=//a[contains(text(),'14')]", "xpath:link"],
+        ["xpath=//div[@id='ui-datepicker-div']/table/tbody/tr[3]/td[4]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[14]", "xpath:href"],
+        ["xpath=//tr[3]/td[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'14')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7da09d0e-0639-433f-94df-08972efbb25a",
+      "comment": "",
+      "command": "click",
+      "target": "id=CustomerDateOfBirth",
+      "targets": [
+        ["id=CustomerDateOfBirth", "id"],
+        ["name=customer.DateOfBirth", "name"],
+        ["css=#CustomerDateOfBirth", "css:finder"],
+        ["xpath=//input[@id='CustomerDateOfBirth']", "xpath:attributes"],
+        ["xpath=//div[7]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9398a3c9-0979-4226-90bb-cfa62fa2c219",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=1",
+      "targets": [
+        ["linkText=1", "linkText"],
+        ["css=.ui-state-hover", "css:finder"],
+        ["xpath=//a[contains(text(),'1')]", "xpath:link"],
+        ["xpath=//div[@id='ui-datepicker-div']/table/tbody/tr/td[5]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//td[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'1')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3ac788ca-210a-45cf-b3dd-3db726032f93",
+      "comment": "",
+      "command": "click",
+      "target": "id=CustomerDateOfBirth",
+      "targets": [
+        ["id=CustomerDateOfBirth", "id"],
+        ["name=customer.DateOfBirth", "name"],
+        ["css=#CustomerDateOfBirth", "css:finder"],
+        ["xpath=//input[@id='CustomerDateOfBirth']", "xpath:attributes"],
+        ["xpath=//div[7]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "afd82714-6848-457f-9480-7b589ee41078",
+      "comment": "",
+      "command": "type",
+      "target": "id=CustomerDateOfBirth",
+      "targets": [
+        ["id=CustomerDateOfBirth", "id"],
+        ["name=customer.DateOfBirth", "name"],
+        ["css=#CustomerDateOfBirth", "css:finder"],
+        ["xpath=//input[@id='CustomerDateOfBirth']", "xpath:attributes"],
+        ["xpath=//div[7]/div[2]/input", "xpath:position"]
+      ],
+      "value": "2008-06-01"
+    }, {
+      "id": "8eb87c31-9453-42ea-a072-1f784e592b13",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(3) > .col",
+      "targets": [
+        ["css=.row:nth-child(3) > .col", "css:finder"],
+        ["xpath=//div[2]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "28eb2e6a-22b5-4836-a9ea-d44aefe11d7d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col > input",
+      "targets": [
+        ["css=.col > input", "css:finder"],
+        ["xpath=//input[@value='Submit Form']", "xpath:attributes"],
+        ["xpath=//div[8]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "031d453e-7cd6-4c41-89ee-4a35485a1d69",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["04cdc53d-fd11-415b-a6ba-ad8f26370add"]
+  }],
+  "urls": ["http://localhost:61104/"],
+  "plugins": []
+}

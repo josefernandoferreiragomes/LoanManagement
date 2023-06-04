@@ -21,7 +21,9 @@ namespace LoanManagement.Tests.Controllers
             ValuesController controller = new ValuesController();
 
             // Act
-            IEnumerable<string> result =  Json.Decode<IEnumerable<string>>( controller.Get().ToString());
+            //System.Web.Http.Results.JsonResult<IEnumerable<string>> jsonResult = controller.Get();
+            //IEnumerable<string> result =  Json.Decode<IEnumerable<string>>(jsonResult.ToString());
+            IEnumerable<string> result = controller.Get();            
 
             // Assert
             Assert.IsNotNull(result);

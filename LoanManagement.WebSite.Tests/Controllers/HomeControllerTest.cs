@@ -37,8 +37,7 @@ namespace LoanManagement.WebSite.Tests.Controllers
             //ActionResult result = controller.About();
 
             // Assert
-            //to be corrected. obtain viewbag instead
-            Assert.AreEqual("Your application description page.", result.ViewBag);
+            Assert.AreEqual("Your application description page.", result.ViewBag.Message);
         }
 
         [TestMethod]

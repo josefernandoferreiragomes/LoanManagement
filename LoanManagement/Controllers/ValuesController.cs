@@ -11,18 +11,10 @@ namespace LoanManagement.Controllers
     public class ValuesController : ApiController
     {
         // GET api/values
-        //public IEnumerable<string> Get()
-        //{
-        //    return new string[] { "value1", "value2" };
-        //}
-
-        public JsonResult <IEnumerable<string>> Get()
+        public IEnumerable<string> Get()
         {
-            IEnumerable<string> values = new List<string>();
-            values.Append<string>("value1");
-            values.Append<string>("value2");
-            return Json(values);
-        }
+            return new string[] { "value1", "value2" };
+        }        
 
         // GET api/values/5
         public string Get(int id)

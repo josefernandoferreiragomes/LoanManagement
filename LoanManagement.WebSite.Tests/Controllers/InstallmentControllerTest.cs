@@ -24,11 +24,11 @@ namespace LoanManagement.WebSite.Tests.Controllers
 
             // Assert
             Assert.IsNotNull(result);
-        }
+        }       
 
         [TestMethod]
-        public async void LoanInstallments()
-        {
+        public async Task LoanInstallments()
+         {
             // Arrange
             InstallmentController controller = new InstallmentController();
 
@@ -44,7 +44,7 @@ namespace LoanManagement.WebSite.Tests.Controllers
 
             // Assert
             //to be corrected. obtain viewbag instead
-            Assert.AreEqual("Your application description page.", result.ViewBag);
+            Assert.AreEqual("All installments", result.ViewBag.Message);
         }
 
         [TestMethod]

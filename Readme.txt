@@ -111,6 +111,10 @@ Dependency injection
 
 AutoMapper
 	https://dotnettutorials.net/lesson/automapper-in-c-sharp/
+
+Dependency injection config file with factory
+	https://www.devonblog.com/software-development/configure-unity-container-config-file/
+
 Initial Configuration:
 	Populate database
 			LoanManagement.DB.Dao.LoanManagementDBContext LoanManagement.DB.Tests->LoanManagementTest.cs->TestDbContextDbSeed
@@ -135,7 +139,7 @@ Git Merge
 	4 commit
 	5 push
 	
-	6 select other branch in VS
+	6 select and load other branch in VS
 	7 compare with other branch (if necessary)
 	8 right click in first branch -> Merge into curent branch
 	9 push

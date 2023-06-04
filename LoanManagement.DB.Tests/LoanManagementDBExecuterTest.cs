@@ -15,7 +15,7 @@ namespace LoanManagement.DB.Tests
             DBLoanManagerRepository repository = new DBLoanManagerRepository();
             CustomerLoaInstallmentDBIn objIn = new CustomerLoaInstallmentDBIn();
 
-            objIn.CustomerId = 4;
+            objIn.CustomerId = 8;
             objIn.PageSize = 2;
             objIn.LastPageLastInstallmentId = 0;
 

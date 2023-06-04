@@ -18,7 +18,7 @@ namespace LoanManagement.DB.Dao
 
         public LoanManagementDBContext() : base("name=LoanManagement.DB.Dao.LoanManagementDBContext") 
         {
-            Database.SetInitializer<LoanManagementDBContext>(new DropCreateDatabaseAlways<LoanManagementDBContext>());
+            //Database.SetInitializer<LoanManagementDBContext>(new DropCreateDatabaseAlways<LoanManagementDBContext>());
 
         }
 
