@@ -1,3 +1,21 @@
+Initial Configuration:
+	Populate database
+			LoanManagement.DB.Dao.LoanManagementDBContext LoanManagement.DB.Tests->LoanManagementTest.cs->TestDbContextDbSeed
+			LoanManagementDB->Publish
+			LoanManagementDB->LoanManagementDB->scripts->PopulateDatabase.sql
+
+Start applications
+	solution->configure startup projects
+	web > start without debugging
+	website > start
+
+To See API definition
+	in ASP.NEt api homepage -> click API
+	in swagger, browse to http://localhost:51852/swagger/
+		to get api definition, copy text texbox on top with http://localhost:51852/swagger/docs/v1
+			example request http://localhost:51852/api/CustomerItem?SearchKeyword=client
+
+References:
 
 Using entity framework
 	https://www.entityframeworktutorial.net/code-first/simple-code-first-example.aspx
@@ -115,23 +133,6 @@ AutoMapper
 Dependency injection config file with factory
 	https://www.devonblog.com/software-development/configure-unity-container-config-file/
 
-Initial Configuration:
-	Populate database
-			LoanManagement.DB.Dao.LoanManagementDBContext LoanManagement.DB.Tests->LoanManagementTest.cs->TestDbContextDbSeed
-			LoanManagementDB->Publish
-			LoanManagementDB->LoanManagementDB->scripts->PopulateDatabase.sql
-
-Start applications
-	solution->configure startup projects
-	web > start without debugging
-	website > start
-
-To See API definition
-	in ASP.NEt api homepage -> click API
-	in swagger, browse to http://localhost:51852/swagger/
-		to get api definition, copy text texbox on top with http://localhost:51852/swagger/docs/v1
-			example request http://localhost:51852/api/CustomerItem?SearchKeyword=client
-	
 Git Merge
 	1 select branch in VS
 	2 pull / sync
