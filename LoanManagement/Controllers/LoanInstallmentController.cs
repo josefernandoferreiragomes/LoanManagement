@@ -16,7 +16,7 @@ namespace LoanManagement.Controllers
       
         public LoanInstallmentController()
         {
-            _LoanManagementRepository = ApplicationContainer.GetContainer().Resolve<LoanManagement.Repositories.LoanManagerRepository>();
+            _LoanManagementRepository = ApplicationContainer.GetContainer().Resolve<LoanManagement.Interfaces.ILoanManagerRepository>();
         }
         // GET api/values
         public IEnumerable<LoanManagement.DB.Data.CustomerLoanInstallmentDBOutItem> Get(int customerId, int pageSize, int lastId)

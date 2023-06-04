@@ -22,15 +22,20 @@ namespace LoanManagement.Web.UnitTests
         public static IDBLoanManagerRepository _mockServiceRepository = MockRepository.GenerateStub<IDBLoanManagerRepository>();
         public static ILoanManagerRepository _mockManagerRepository;
         public static ILoanManagementController _controller;
-        
 
+
+        [TestInitialize]
         public void BaseStartUp()
         {
             ApplicationContainer.RegisterSingleton<IDBLoanManagerRepository, DBLoanManagerRepository>();
             ApplicationContainer.RegisterSingleton<ILoanManagerRepository, LoanManagerRepository>();
         }
-
+        [TestCleanup]
+        private void EndTest()
+        {
+            ApplicationContainer.GetContainer().Dispose();
+        }
     }
 
-  
+
 }

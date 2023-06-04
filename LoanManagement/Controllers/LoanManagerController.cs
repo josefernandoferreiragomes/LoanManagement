@@ -13,7 +13,7 @@ namespace LoanManagement.Controllers
         
         public LoanManagerController()
         {
-            _LoanManagementRepository = ApplicationContainer.GetContainer().Resolve<LoanManagement.Repositories.LoanManagerRepository>();
+            _LoanManagementRepository = ApplicationContainer.GetContainer().Resolve<LoanManagement.Interfaces.ILoanManagerRepository>();
         }
         public LoanManagerController(LoanManagement.Interfaces.ILoanManagerRepository repository)
         {

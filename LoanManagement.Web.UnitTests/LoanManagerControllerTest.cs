@@ -18,7 +18,7 @@ namespace LoanManagement.Web.UnitTests
 
         private void StartUp()
         {
-            BaseStartUp();
+            //BaseStartup will run automatically
 
             List<Customer> customerListMock = new List<Customer>{
                     new Customer
@@ -63,24 +63,7 @@ namespace LoanManagement.Web.UnitTests
             Assert.IsNotNull(customerListMock);
             #endregion
 
-        }
-
-
-        //[TestInitialize]
-        //private void SetUpTest()
-        //{
-
-        //    ApplicationContainer.GetContainer().RegisterSingleton<LoanManagement.DB.Interfaces.IDBLoanManagerRepository, LoanManagement.Web.UnitTests.Mocks.DBLoanManagerRepositoryMock>();
-        //    ApplicationContainer.GetContainer().RegisterSingleton<LoanManagement.Interfaces.IDBLoanManagerRepository, LoanManagement.Repositories.DBLoanManagerRepository>();
-        //    _controller = new Controllers.LoanManagerController();
-
-        //}
-
-        //[TestCleanup]
-        //private void EndTest()
-        //{
-        //    ApplicationContainer.GetContainer().Dispose();
-        //}
+        }        
 
     }
 }

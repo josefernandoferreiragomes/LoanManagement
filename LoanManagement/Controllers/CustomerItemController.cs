@@ -16,7 +16,7 @@ namespace LoanManagement.Controllers
         
         public CustomerItemController()
         {
-            _LoanManagementRepository = ApplicationContainer.GetContainer().Resolve<LoanManagement.Repositories.LoanManagerRepository>();
+            _LoanManagementRepository = ApplicationContainer.GetContainer().Resolve<LoanManagement.Interfaces.ILoanManagerRepository>();
         }
         public CustomerItemController(LoanManagement.Interfaces.ILoanManagerRepository repository)
         {
