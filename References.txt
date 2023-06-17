@@ -133,6 +133,9 @@ AutoMapper
 Dependency injection config file with factory
 	https://www.devonblog.com/software-development/configure-unity-container-config-file/
 
+Nlog
+	https://nlog-project.org/download/
+
 Git Merge
 	1 select branch in VS
 	2 pull / sync

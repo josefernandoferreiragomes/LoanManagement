@@ -14,8 +14,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EE40F18D-C87F-4160-AF0B-7594C0A6035D}"
 	ProjectSection(SolutionItems) = preProject
 		NextThemes.txt = NextThemes.txt
-		Readme.txt = Readme.txt
+		ReadMe.md = ReadMe.md
 		SomeQueries.txt = SomeQueries.txt
+		References.txt = References.txt
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanManagement.Platform", "LoanManagement.Platform\LoanManagement.Platform.csproj", "{8E5D0944-0364-4EA0-A39C-078EC5FEFDE4}"

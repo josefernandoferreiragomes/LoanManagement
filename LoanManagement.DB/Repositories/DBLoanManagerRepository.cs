@@ -2,8 +2,7 @@
 using LoanManagement.DB.DaoSqlExecuters;
 using LoanManagement.DB.Data;
 using LoanManagement.DB.Interfaces;
-using NLog;
-using NLog.Config;
+
 using System;
 using System.Collections.Generic;
 using System.Data.Entity.Core.Metadata.Edm;
@@ -11,12 +10,13 @@ using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using LoanManagement.Platform.Serializer;
+using LoanManagement.Platform.Logger;
 namespace LoanManagement.DB.Repositories
 {
     public class DBLoanManagerRepository : IDBLoanManagerRepository
     {
-        private static readonly NLog.Logger Logger = NLog.LogManager.GetCurrentClassLogger();   
+         
         LoanManagementDBContext _dbContext { get; set; }
         LoanManagementDBExecuter _dbExecuter { get; set; }
         public DBLoanManagerRepository() 
@@ -29,24 +29,25 @@ namespace LoanManagement.DB.Repositories
         }
         private void SetupLog()
         {
-            //TO BE MOVED TO A CUSTOM LOGGER CLASS
-            //LOG
-            var config = new NLog.Config.LoggingConfiguration();
+            ////TO BE MOVED TO A CUSTOM LOGGER CLASS
+            ////LOG
+            //var config = new NLog.Config.LoggingConfiguration();
 
-            // Targets where to log to: File and Console
-            var logfile = new NLog.Targets.FileTarget("logfile") { FileName = @"C:\Users\josef\source\repos\josefernandoferreiragomes\LoanManagement\LogFiles\logfile.txt" };
-            var logconsole = new NLog.Targets.ConsoleTarget("logconsole");
+            //// Targets where to log to: File and Console
+            //var logfile = new NLog.Targets.FileTarget("logfile") { FileName = @"C:\Users\josef\source\repos\josefernandoferreiragomes\LoanManagement\LogFiles\logfile2.txt" };
+            //var logconsole = new NLog.Targets.ConsoleTarget("logconsole");
 
-            // Rules for mapping loggers to targets            
-            config.AddRule(LogLevel.Info, LogLevel.Fatal, logconsole);
-            config.AddRule(LogLevel.Debug, LogLevel.Fatal, logfile);
+            //// Rules for mapping loggers to targets            
+            //config.AddRule(LogLevel.Info, LogLevel.Fatal, logconsole);
+            //config.AddRule(LogLevel.Debug, LogLevel.Fatal, logfile);
 
-            // Apply config           
-            NLog.LogManager.Configuration = config;
+            //// Apply config           
+            //NLog.LogManager.Configuration = config;
         }
 
         public List<Customer> GetCustomers()
         {
+            LoggerHelper.GetLogger().Info(string.Format("{0}{1}", this.GetType(), System.Reflection.MethodInfo.GetCurrentMethod()));
             var query = from b in _dbContext.Customers.ToList<Customer>()
                         select b;
             return query.ToList();
@@ -54,13 +55,15 @@ namespace LoanManagement.DB.Repositories
 
         public List<Customer> GetPageOfClassGeneric(int page, int pageSize, string nameFilter)
         {
-            Logger.Info("GetPageOfClassGeneric");
+
+            LoggerHelper.GetLogger().Info(string.Format("{0}{1}",this.GetType(), System.Reflection.MethodInfo.GetCurrentMethod()));
             var query = _dbContext.Customers
                         .OrderBy(on=>on.CustomerName)
                         .Where(c => c.CustomerName.Contains(nameFilter))
                         .Skip((page-1)*pageSize)
                         .Take(pageSize);
             List<Customer> customers = query.ToList();
+            LoggerHelper.GetLogger().Info(string.Format("{0}{1}{2}", customers.GetType(), System.Reflection.MethodInfo.GetCurrentMethod(), JsonSerializerHelper.SerializeToJson<List<Customer>>(customers)));
             List<Customer> customersOut = new List<Customer>();
             foreach (Customer custItem in customers)
             {

@@ -1,0 +1,4 @@
+2023-06-17 16:35:23.8310|INFO|LoanManagement.DB.Repositories.DBLoanManagerRepository|LoanManagement.DB.Repositories.DBLoanManagerRepositorySystem.Collections.Generic.List`1[LoanManagement.DB.Data.Customer] GetCustomers()
+2023-06-17 16:36:42.3670|INFO|LoanManagement.DB.Repositories.DBLoanManagerRepository|LoanManagement.DB.Repositories.DBLoanManagerRepositorySystem.Collections.Generic.List`1[LoanManagement.DB.Data.Customer] GetPageOfClassGeneric(Int32, Int32, System.String)
+2023-06-17 16:38:32.8798|INFO|LoanManagement.DB.Repositories.DBLoanManagerRepository|LoanManagement.DB.Repositories.DBLoanManagerRepositorySystem.Collections.Generic.List`1[LoanManagement.DB.Data.Customer] GetCustomers()
+2023-06-17 16:38:50.2519|INFO|LoanManagement.DB.Repositories.DBLoanManagerRepository|LoanManagement.DB.Repositories.DBLoanManagerRepositorySystem.Collections.Generic.List`1[LoanManagement.DB.Data.Customer] GetPageOfClassGeneric(Int32, Int32, System.String)

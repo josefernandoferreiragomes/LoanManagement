@@ -10,6 +10,10 @@ TODO:
 			interest rate
 			automatic monthly payment (for 1y), but editable
 			automatic installment duration (1y), but editable			
+		
+Doing:
+	better logging in platform
+	better serializing in platform
 
 Already done:
 	filter and paging customer data
