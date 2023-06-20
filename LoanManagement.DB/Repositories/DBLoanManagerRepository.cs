@@ -55,21 +55,34 @@ namespace LoanManagement.DB.Repositories
 
         public List<Customer> GetPageOfClassGeneric(int page, int pageSize, string nameFilter)
         {
-
-            LoggerHelper.GetLogger().Info(string.Format("{0}{1}",this.GetType(), System.Reflection.MethodInfo.GetCurrentMethod()));
-            var query = _dbContext.Customers
-                        .OrderBy(on=>on.CustomerName)
-                        .Where(c => c.CustomerName.Contains(nameFilter))
-                        .Skip((page-1)*pageSize)
-                        .Take(pageSize);
-            List<Customer> customers = query.ToList();
-            LoggerHelper.GetLogger().Info(string.Format("{0}{1}{2}", customers.GetType(), System.Reflection.MethodInfo.GetCurrentMethod(), JsonSerializerHelper.SerializeToJson<List<Customer>>(customers)));
             List<Customer> customersOut = new List<Customer>();
-            foreach (Customer custItem in customers)
+            
+            LoggerHelper.GetLogger().Info(string.Format("Before DB Call {0}{1}", this.GetType(), System.Reflection.MethodInfo.GetCurrentMethod()));
+            var query = _dbContext.Customers
+                        .OrderBy(on => on.CustomerName)
+                        .Where(c => c.CustomerName.Contains(nameFilter))
+                        .Skip((page - 1) * pageSize)
+                        .Take(pageSize);
+            try
             {
-                Customer tempCustomer = custItem;
-                tempCustomer.LoanList = new List<Loan>();
-                customersOut.Add(tempCustomer);
+                List<Customer> customers = query.ToList();                
+                LoggerHelper.GetLogger().Info(string.Format("After DB Call {0}{1}{2}", customers.GetType(), System.Reflection.MethodInfo.GetCurrentMethod(), JsonSerializerHelper.SerializeToJson<List<Customer>>(customers)));
+                
+                //for temporary purposes, simplifying
+                foreach (Customer custItem in customers)
+                {
+                    Customer tempCustomer = custItem;
+                    tempCustomer.LoanList = new List<Loan>();
+                    customersOut.Add(tempCustomer);
+                }
+            }
+            catch (Exception exp)
+            {
+                throw exp;
+            }
+            finally
+            {
+                
             }
             return customersOut;
         }

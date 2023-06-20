@@ -77,6 +77,11 @@
     <Compile Include="Data\Installment.cs" />
     <Compile Include="Data\Loan.cs" />
     <Compile Include="Interfaces\IDBLoanManagerRepository.cs" />
+    <Compile Include="Migrations\202306031330358_InitialCreate.cs" />
+    <Compile Include="Migrations\202306031330358_InitialCreate.designer.cs">
+      <DependentUpon>202306031330358_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\DBLoanManagerRepository.cs" />
   </ItemGroup>
@@ -92,6 +97,11 @@
       <Project>{8e5d0944-0364-4ea0-a39c-078ec5fefde4}</Project>
       <Name>LoanManagement.Platform</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202306031330358_InitialCreate.resx">
+      <DependentUpon>202306031330358_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

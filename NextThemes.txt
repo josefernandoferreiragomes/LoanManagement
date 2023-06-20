@@ -1,5 +1,7 @@
 TODO:
 	
+	improve exception handling with custom exceptions
+	
 	fix ADO, with specific instructions
 	
 	widen unit testing
@@ -10,7 +12,7 @@ TODO:
 			interest rate
 			automatic monthly payment (for 1y), but editable
 			automatic installment duration (1y), but editable			
-		
+	
 Doing:
 	better logging in platform
 	better serializing in platform

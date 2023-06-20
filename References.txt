@@ -15,6 +15,14 @@ To See API definition
 		to get api definition, copy text texbox on top with http://localhost:51852/swagger/docs/v1
 			example request http://localhost:51852/api/CustomerItem?SearchKeyword=client
 
+Add changes to database 
+	After change to model of LoanManagement.DB.Dao.LoanManagementDBContext
+		In Package Manager Console, select default project LoanManagement.DB
+			"Add-Migration"
+				(will scaffold the next migration based on changes you have made to your model since the last migration was created)
+			"Update-Database"
+				(will apply any pending migrations to the database)
+		
 References:
 
 Using entity framework
@@ -23,7 +31,8 @@ Using entity framework
 	https://www.entityframeworktutorial.net/code-first/code-first-conventions.aspx
 
 	https://learn.microsoft.com/en-us/ef/ef6/modeling/code-first/migrations/existing-database?source=recommendations
-
+	https://learn.microsoft.com/en-us/ef/ef6/modeling/code-first/migrations/
+		
 C:\Program Files\Microsoft SQL Server\150\Tools\Binn
 	SqlLocalDB.exe
 
