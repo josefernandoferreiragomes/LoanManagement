@@ -15,15 +15,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		NextThemes.txt = NextThemes.txt
 		ReadMe.md = ReadMe.md
-		SomeQueries.txt = SomeQueries.txt
 		References.txt = References.txt
+		SomeQueries.txt = SomeQueries.txt
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanManagement.Platform", "LoanManagement.Platform\LoanManagement.Platform.csproj", "{8E5D0944-0364-4EA0-A39C-078EC5FEFDE4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanManagement.WebSite", "LoanManagement.WebSite\LoanManagement.WebSite.csproj", "{7E8A2DD9-0E8B-4766-A888-5D10BA2E99C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanManagement.WebSite.Tests", "LoanManagement.WebSite.Tests\LoanManagement.WebSite.Tests.csproj", "{CACF5597-5EA4-4CAB-B238-0DCB0EB81656}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanManagement.WebSite.IntegratedTests", "LoanManagement.WebSite.Tests\LoanManagement.WebSite.IntegratedTests.csproj", "{CACF5597-5EA4-4CAB-B238-0DCB0EB81656}"
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "LoanManagementDB", "LoanManagementDB\LoanManagementDB.sqlproj", "{72CC4F57-E769-4BE5-8042-1E6C5BA5D68D}"
 EndProject
