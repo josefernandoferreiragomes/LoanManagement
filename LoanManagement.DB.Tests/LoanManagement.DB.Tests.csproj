@@ -62,6 +62,8 @@
     <Compile Include="LoanManagementDBExecuterTest.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="AppSql.config" />
+    <None Include="AppLocaldb.config" />
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>

@@ -1,0 +1,17 @@
+change in config connection strings, DESKTOP-00TH3CU, to your machine name, to run under sql express
+
+Create database on LoanManagementDB sql express
+Schema compare
+execute script PopulateDatabase.sql
+
+For database LoanManagementDB
+at server level, create user for NT AUTHORITY/SYSTEM and give give it admin/dbo permissions
+In IIS, change apppool identity to NT AUTHORITY/SYSTEM
+
+
+Project LoanManagement.DB.Tests
+	run test TestDbContextDbSeed to create database and seed data
+
+For database LoanManagement.DB.Dao.LoanManagementDBContext
+	at server level, create user for NT AUTHORITY/SYSTEM and give give it admin/dbo permissions
+	In IIS, change apppool identity to NT AUTHORITY/SYSTEM

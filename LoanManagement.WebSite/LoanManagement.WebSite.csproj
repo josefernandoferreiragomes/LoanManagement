@@ -16,7 +16,7 @@
     <AssemblyName>LoanManagement.WebSite</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -250,6 +250,20 @@
     <Content Include="Views\Installment\AddLoanInstallment.cshtml" />
     <Content Include="Views\Loan\SimulateLoan.cshtml" />
     <Content Include="Views\Customer\SearchCustomers.cshtml" />
+    <Content Include="WebIISExpress.config" />
+    <Content Include="WebIISExpress.Debug.config">
+      <DependentUpon>WebIISExpress.config</DependentUpon>
+    </Content>
+    <Content Include="WebIISExpress.Release.config">
+      <DependentUpon>WebIISExpress.config</DependentUpon>
+    </Content>
+    <Content Include="WebIIS.config" />
+    <Content Include="WebIIS.Debug.config">
+      <DependentUpon>WebIIS.config</DependentUpon>
+    </Content>
+    <Content Include="WebIIS.Release.config">
+      <DependentUpon>WebIIS.config</DependentUpon>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -291,7 +305,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>61104</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:61104/</IISUrl>
+          <IISUrl>http://localhost/LoanManagement.WebSite</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

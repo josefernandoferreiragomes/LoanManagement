@@ -49,3 +49,36 @@ ROW_NUMBER() OVER (ORDER BY inst.InstallmentId) AS RowId
 FROM Installments inst INNER JOIN Loans ln ON inst.LoanId = ln.LoanId INNER JOIN Customers cust ON ln.Customer_CustomerId=cust.CustomerId		
 	
 SELECT * FROM @TABLEVAR WHERE RowId BETWEEN 1 AND 5
+
+
+
+USE [LoanManagement.DB.Dao.LoanManagementDBContext]
+
+-- DETECT DUPLICATES WHEN THERE IS A SUITABLE ID COLUMN INSIDE THE TABLE
+SELECT CustomerName, COUNT(CustomerId) AS CountCustomerId
+FROM Customers
+GROUP BY CustomerName
+HAVING COUNT(CustomerId) >1
+
+-- DETECT DUPLICATES WHEN NO SUITABLE ID COLUMN INSIDE THE TABLE, AND INSERT INTO TEMP TABLE
+IF EXISTS(SELECT object_id('#duplicatesTable'))
+BEGIN
+	DROP TABLE #duplicatesTable
+END
+
+;with firstTable as(
+SELECT 
+     [CustomerName]
+	,ROW_NUMBER() OVER ( ORDER BY CustomerName ) AS RowNumber 
+FROM [LoanManagement.DB.Dao.LoanManagementDBContext].[dbo].[Customers]
+)
+
+select CustomerName, COUNT(RowNumber) AS CountRowNumber
+INTO #duplicatesTable
+from firstTable
+GROUP BY CustomerName
+HAVING COUNT(RowNumber) >1
+
+SELECT * FROM #duplicatesTable
+
+

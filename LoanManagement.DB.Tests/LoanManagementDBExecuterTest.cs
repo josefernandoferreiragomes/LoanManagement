@@ -2,6 +2,7 @@
 using LoanManagement.DB.Repositories;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Linq;
 
 namespace LoanManagement.DB.Tests
 {
@@ -28,6 +29,7 @@ namespace LoanManagement.DB.Tests
             Assert.IsTrue(objOut.ListOfItems!=null);
             Assert.IsTrue(objOut.ListOfItems.Count > 0);
             Console.WriteLine(String.Format("RowCount:{0}",objOut.ListOfItems.Count));
+            Console.WriteLine(String.Format("RowCount:{0}", objOut.ListOfItems.ToList().FirstOrDefault().InstallmentValue));
         }
     }
 }

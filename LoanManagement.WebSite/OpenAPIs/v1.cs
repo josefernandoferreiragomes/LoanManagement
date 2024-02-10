@@ -17,7 +17,7 @@ namespace Management
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.8.2.0 (NJsonSchema v10.2.1.0 (Newtonsoft.Json v11.0.0.0))")]
     public partial class CustomerItemClient 
     {
-        private string _baseUrl = "http://localhost:51852";
+        private string _baseUrl = "http://localhost:/LoanManagement.Web";
         private System.Net.Http.HttpClient _httpClient;
         private System.Lazy<Newtonsoft.Json.JsonSerializerSettings> _settings;
     
@@ -413,7 +413,7 @@ namespace Management
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.8.2.0 (NJsonSchema v10.2.1.0 (Newtonsoft.Json v11.0.0.0))")]
     public partial class LoanInstallmentClient 
     {
-        private string _baseUrl = "http://localhost:51852";
+        private string _baseUrl = "http://localhost:/LoanManagement.Web";
         private System.Net.Http.HttpClient _httpClient;
         private System.Lazy<Newtonsoft.Json.JsonSerializerSettings> _settings;
     
@@ -633,7 +633,7 @@ namespace Management
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.8.2.0 (NJsonSchema v10.2.1.0 (Newtonsoft.Json v11.0.0.0))")]
     public partial class LoanManagerClient 
     {
-        private string _baseUrl = "http://localhost:51852";
+        private string _baseUrl = "http://localhost/LoanManagement.Web";
         private System.Net.Http.HttpClient _httpClient;
         private System.Lazy<Newtonsoft.Json.JsonSerializerSettings> _settings;
     
@@ -1134,7 +1134,7 @@ namespace Management
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.8.2.0 (NJsonSchema v10.2.1.0 (Newtonsoft.Json v11.0.0.0))")]
     public partial class ValuesClient 
     {
-        private string _baseUrl = "http://localhost:51852";
+        private string _baseUrl = "http://localhost:/LoanManagement.Web";
         private System.Net.Http.HttpClient _httpClient;
         private System.Lazy<Newtonsoft.Json.JsonSerializerSettings> _settings;
     

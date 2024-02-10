@@ -125,6 +125,8 @@
     <Content Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AppSql.config" />
+    <Content Include="AppLocalDb.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
