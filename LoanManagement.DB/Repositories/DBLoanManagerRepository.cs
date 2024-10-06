@@ -12,16 +12,21 @@ using System.Text;
 using System.Threading.Tasks;
 using LoanManagement.Platform.Serializer;
 using LoanManagement.Platform.Logger;
+using System.Configuration;
 namespace LoanManagement.DB.Repositories
 {
     public class DBLoanManagerRepository : IDBLoanManagerRepository
     {
-         
+
+        private string ConnectionString;
         LoanManagementDBContext _dbContext { get; set; }
-        LoanManagementDBExecuter _dbExecuter { get; set; }
+        LoanManagementDBExecuter _dbExecuter { get; set; }        
+        
         public DBLoanManagerRepository() 
-        { 
-            _dbContext = new LoanManagementDBContext();
+        {
+            this.ConnectionString = ConfigurationManager.ConnectionStrings["LoanManagement.DB.Dao.LoanManagementDBContext"].ConnectionString;
+
+            _dbContext = new LoanManagementDBContext(this.ConnectionString);
             _dbExecuter= new LoanManagementDBExecuter();
             SetupLog();
 

@@ -92,9 +92,9 @@
     <Folder Include="System\Data\Entity\ModelConfiguration\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LoanManagement.Platform\LoanManagement.Platform.csproj">
+    <ProjectReference Include="..\LoanManagement.Utilities\LoanManagement.Utilities.csproj">
       <Project>{8e5d0944-0364-4ea0-a39c-078ec5fefde4}</Project>
-      <Name>LoanManagement.Platform</Name>
+      <Name>LoanManagement.Utilities</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

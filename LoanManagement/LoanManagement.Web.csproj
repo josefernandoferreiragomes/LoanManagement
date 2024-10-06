@@ -300,7 +300,7 @@
       <Project>{03b7685f-e472-46f7-847d-0b63f19dde69}</Project>
       <Name>LoanManagement.DB</Name>
     </ProjectReference>
-    <ProjectReference Include="..\LoanManagement.Platform\LoanManagement.Platform.csproj">
+    <ProjectReference Include="..\LoanManagement.Utilities\LoanManagement.Utilities.csproj">
       <Project>{8E5D0944-0364-4EA0-A39C-078EC5FEFDE4}</Project>
       <Name>LoanManagement.Platform</Name>
     </ProjectReference>

@@ -16,7 +16,7 @@ namespace LoanManagement.DB.Dao
 
         public DbSet<Installment> Installments { get; set; }
 
-        public LoanManagementDBContext() : base("name=LoanManagement.DB.Dao.LoanManagementDBContext") 
+        public LoanManagementDBContext(string connectionString) : base(connectionString) 
         {
             //Database.SetInitializer<LoanManagementDBContext>(new CreateDatabaseIfNotExists<LoanManagementDBContext>());
             

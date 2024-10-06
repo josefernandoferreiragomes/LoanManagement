@@ -78,9 +78,9 @@
       <Project>{03B7685F-E472-46F7-847D-0B63F19DDE69}</Project>
       <Name>LoanManagement.DB</Name>
     </ProjectReference>
-    <ProjectReference Include="..\LoanManagement.Platform\LoanManagement.Platform.csproj">
+    <ProjectReference Include="..\LoanManagement.Utilities\LoanManagement.Utilities.csproj">
       <Project>{8e5d0944-0364-4ea0-a39c-078ec5fefde4}</Project>
-      <Name>LoanManagement.Platform</Name>
+      <Name>LoanManagement.Utilities</Name>
     </ProjectReference>
     <ProjectReference Include="..\LoanManagement\LoanManagement.Web.csproj">
       <Project>{66055960-7d32-48ce-b128-e077f38b84e1}</Project>

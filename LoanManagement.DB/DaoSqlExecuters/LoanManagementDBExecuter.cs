@@ -14,6 +14,12 @@ namespace LoanManagement.DB.DaoSqlExecuters
     {
         SqlConnection sqlCon = null;
         String SqlconString = ConfigurationManager.ConnectionStrings["LoanManagementDB"].ConnectionString;
+
+        public LoanManagementDBExecuter ()
+        {
+
+        }
+
         public CustomerLoanInstallmentDBOut CustomerInstallmentGetPage(CustomerLoaInstallmentDBIn objIn)
         {
             CustomerLoanInstallmentDBOut ObjDbOut =new CustomerLoanInstallmentDBOut();

@@ -4,6 +4,7 @@ using LoanManagement.DB.Repositories;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 
 namespace LoanManagement.DB.Tests
@@ -11,10 +12,18 @@ namespace LoanManagement.DB.Tests
     [TestClass]
     public class LoanManagementTest
     {
+        private readonly string ConnectionString;
+
+        public LoanManagementTest()
+        {
+            this.ConnectionString = ConfigurationManager.ConnectionStrings["LoanManagement.DB.Dao.LoanManagementDBContext"].ConnectionString;
+        }
+
+
         [TestMethod]
         public void TestDbContextDbSeed()
         {
-            using (var context = new LoanManagementDBContext())
+            using (var context = new LoanManagementDBContext(this.ConnectionString))
             {
                 List<Customer> customers = new List<Customer>();
                 Customer customerA = new Customer() { CustomerName = "Jack Ma" };
@@ -50,7 +59,7 @@ namespace LoanManagement.DB.Tests
         [TestMethod]
         public void TestDbContext()
         {
-            using (var db = new LoanManagementDBContext())
+            using (var db = new LoanManagementDBContext(this.ConnectionString))
             {
                 // Create and save a new Customer
 

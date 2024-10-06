@@ -282,7 +282,7 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LoanManagement.Platform\LoanManagement.Platform.csproj">
+    <ProjectReference Include="..\LoanManagement.Utilities\LoanManagement.Utilities.csproj">
       <Project>{8E5D0944-0364-4EA0-A39C-078EC5FEFDE4}</Project>
       <Name>LoanManagement.Platform</Name>
     </ProjectReference>
